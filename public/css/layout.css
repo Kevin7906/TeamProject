@@ -1,0 +1,64 @@
+.nav-item a {
+    position: relative;
+    transition: 0.5s;
+    color: rgb(0, 0, 0,0.66);
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px 0;
+    margin: 10px 0;
+}
+
+.nav-item a:hover {
+    color: #fff;
+}
+
+.nav-item a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40%;
+    width: 0;
+    height: 100%;
+    background: url("../images/btn-bg3.png");
+    background-size: cover;
+    transform-origin: left;
+    transition: 0.5s;
+}
+
+.nav-item a:hover::before {
+    width: 175%;
+}
+.nav-item span {
+    position: relative;
+    z-index: 1;
+}
+
+.nav-item i {
+    position: relative;
+    z-index: 1;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 10;
+    background: #fff;
+}
+
+.final-menu {
+    margin-bottom: 300px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    height: 300px;
+    display: flex;
+    width: 100%;
+    color: rgb(216, 216, 216);
+    background: rgb(40, 40, 40);
+    text-transform: uppercase;
+}
