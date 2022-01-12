@@ -21,6 +21,9 @@ use App\Http\Controllers\ShoppingCartController;
 // 前台
 Route::get('/',[FrontController::class,'index'])->name('index');
 
+// 關於我們
+
+
 // 菜單
 Route::get('/product',[FrontController::class,'productList'])->name('product.list');
 
@@ -38,6 +41,10 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::prefix('/shopping-cart')->group(function () {
     Route::post('/add',[ShoppingCartController::class,'add'])->name('shopping-cart.add');
     Route::post('/update',[ShoppingCartController::class,'update'])->name('shopping-cart.update');
+
+    Route::middleware(['cart.check'])->group(function() {
+        Route::get('/step01',[ShoppingCartController::class,'step01'])->name('shopping-cart.step01');
+    });
 });
 
 // 後台

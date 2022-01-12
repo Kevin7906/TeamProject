@@ -1,0 +1,135 @@
+.card {
+    width: 100%;
+}
+
+.banner {
+    position: relative;
+    z-index: 10;
+    background: rgb(249, 233, 209);
+}
+
+.banner-img {
+    position: relative;
+    z-index: 10;
+    height: 400px;
+    background-image: url('../images/menu/products/menu-top.jpg');
+    background-size: cover;
+    background-position-y: 47%;
+}
+
+.text-decoration {
+    position: relative;
+    z-index: 10;
+    background: rgb(249, 233, 209);
+}
+
+.card-body {
+    height: 300px;
+}
+
+.menu-img {
+    height: 100;
+    clip-path: polygon(70% 0, 90% 5%, 100% 36%, 97% 84%, 83% 98%, 40% 100%, 14% 93%, 0 78%, 4% 21%, 18% 4%);
+    background-size: cover;
+    background-position: center;
+}
+
+.col-6.mt-4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.classic-drink-active, .special-drink-active, .soda-drink-active, .side-dish-active {
+    width: 150px;
+    border-radius: 10px;
+    background-color: #3F6D62;
+    border: solid 3px #3F6D62;
+    color: wheat;
+    transform: scale(1.4);
+    font-weight: 900;
+}
+
+.image-classic, .image-special, .image-soda, .image-side-dish {
+    display: none;
+}
+
+.image-active {
+    display: block;
+}
+
+/* //////////////////////////////////// */
+
+.food-info {
+    position: relative;
+    height: 280px;
+    margin: 1em;
+    border-radius: 10px;
+    box-shadow: 5px 10px 15px black;
+}
+
+.food-info:before,
+.food-info::after {
+    content: '';
+    position: absolute;
+    top: 1.25em;
+    bottom: 1.25em;
+    left: 1.25em;
+    right: 1.25em;
+    cursor: pointer;
+}
+
+.food-info::before {
+    transform: scale(0, 1);
+    transition: transform ease-out 250ms;
+    border-top: 2px solid blue;
+    border-bottom: 2px solid purple;
+}
+
+.food-info::after {
+    transform: scale(1, 0);
+    transition: transform ease-out 250ms;
+    border-left: 2px solid red;
+    border-right: 2px solid green;
+}
+
+.food-info:hover::before {
+    transform: scale(1.05, 1);
+}
+
+.food-info:hover::after {
+    transform: scale(1, 1.05);
+}
+
+
+.food__image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 1;
+    border-radius: 10px;
+}
+
+.food-info:hover .food__image {
+    opacity: 0.2;
+}
+
+.food-info:hover .food__text {
+    opacity: 1;
+}
+
+.food__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: black;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity ease-out 250ms;
+}
+
+.food__body {
+    font-size: 18px;
+}
+
+

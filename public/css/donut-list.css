@@ -1,73 +1,20 @@
-.nav-item a {
-    position: relative;
-    transition: 0.5s;
-    color: rgb(0, 0, 0,0.66);
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-    padding: 8px 0;
-    margin: 10px 0;
-}
-
-.nav-item a:hover {
-    color: #fff;
-}
-
-.nav-item a:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -40%;
-    width: 0;
-    height: 100%;
-    background: url('./img/btn-bg3.png');
-    background-size: cover;
-    transform-origin: left;
-    transition: 0.5s;
-}
-
-.nav-item a:hover::before {
-    width: 175%;
-}
-
-.nav-item span {
-    position: relative;
-    z-index: 1;
-}
-
-.nav-item i {
-    position: relative;
-    z-index: 1;
-}
-
-section {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    z-index: 10;
-    background: #DAC9A6;
-    margin-bottom: 300px;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    z-index: 1;
-    height: 300px;
-    display: flex;
-    width: 100%;
-    color: rgb(216, 216, 216);
-    background: rgb(40, 40, 40);
-    text-transform: uppercase;
-}
-
 .accordion-item {
     background-color: #FCFAF2;
 }
 
-.card {
+.card{
+    border-radius: 4px;
     background: #FCFAF2;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    cursor: pointer;
+    padding: 0 5px;
     border: 0;
+}
+
+.card:hover{
+     transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 }
 
 .donut-decorate {
@@ -101,6 +48,13 @@ footer {
     display: inline-block;
     transform-origin: 0 100px;
 }
+
+.space {
+    height: 360px;
+    position: relative;
+    z-index: -10;
+}
+
 
 .buy-content {
     position: relative;
@@ -175,8 +129,7 @@ footer {
 
 .buy-content span:nth-child(1) {
     display: initial;
-}
-
+    }
 
 .buy-btn {
     position: relative;
@@ -184,32 +137,32 @@ footer {
     padding: 10px 30px;
     border-radius: 5px;
     background: #86A697;
-    color: white;
+    color: #465D4C;
     letter-spacing: 1px;
+    transition: all 0.2s ease-in-out;
     overflow: hidden;
 }
 
-.buy-btn p {
-    position: relative;
-    z-index: 1;
-    display: inline;
-    color: rgb(216, 216, 216);
-}
-
-.buy-btn::before {
-    content:'';
+.buy-btn:before {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    width: 3em;
+    display: block;
     position: absolute;
-    top: var(--y);
-    left: var(--x);
-    transform: translate(-50%, -50%);
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: #465D4C;
-    transition: width 0.7s, height 0.7s;
+    top: 0;
+    left: -4.5em;
+    transform: skewX(-45deg) translateX(0);
+    transition: none;
 }
 
-.buy-btn:hover::before {
-    width: 240px;
-    height: 240px;
+.buy-btn:hover {
+    background-color: #465D4C;
+    color: gainsboro;
+    border-bottom: 4px solid darken(#465D4C, 10%);
+}
+
+.buy-btn:hover:before {
+    transform: skewX(-45deg) translateX(13.5em);
+    transition: all 0.5s ease-in-out;
 }

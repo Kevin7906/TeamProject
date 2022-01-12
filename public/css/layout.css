@@ -1,3 +1,8 @@
+body
+{
+    font-family: '851MkPOP';
+}
+
 .nav-item a {
     position: relative;
     transition: 0.5s;
@@ -44,8 +49,11 @@ section {
     width: 100%;
     min-height: 100vh;
     z-index: 10;
-    background: #fff;
+    background: #DAC9A6;
+    margin-bottom: 300px;
 }
+
+
 
 .final-menu {
     margin-bottom: 300px;

@@ -32,9 +32,10 @@
 
 .w3ls_address_mail_footer_grids iframe {
     width: 100%;
-    height: 25em;
+    height: 620px;
     border: none;
-    margin-bottom: 2em;
+    margin: 0 auto;
+    background-color: #fff;
 }
 
 h4.white-w3ls {
@@ -97,6 +98,7 @@ h4.white-w3ls {
 
 .contactright {
     padding: 4em;
+    position: relative;
 }
 
 .w3ls_footer_grid_left {

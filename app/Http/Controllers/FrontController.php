@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Donut;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -18,12 +19,21 @@ class FrontController extends Controller
 
     public function donutList()
     {
-        return view('front.donut.list');
+        $classes = Donut::where('donut_category_id','class')->get();
+        $tastes = Donut::where('donut_category_id','taste')->get();
+        $colors = Donut::where('donut_category_id','colorful')->get();
+
+        return view('front.donut.list',compact('classes','tastes','colors'));
     }
 
     public function locationList()
     {
         return view('front.location.list');
+    }
+
+    public function productList()
+    {
+        return view('front.product.list');
     }
 
 }

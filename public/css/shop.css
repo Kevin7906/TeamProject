@@ -1,0 +1,159 @@
+section {
+    margin-bottom: 360px;
+}
+
+.accordion-item {
+    background-color: #FCFAF2;
+}
+
+.card {
+    background: #FCFAF2;
+    border: 0;
+}
+
+.donut-decorate {
+    position: relative;
+    z-index: -1;
+}
+
+.donut-decorate .donut-text {
+    position: absolute;
+    color: #78552B;
+    user-select: none;
+    pointer-events: none;
+    font-size: 1.5em;
+    animation: animate 7.5s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.donut-decorate .donut-text span {
+    position: absolute;
+    top: -100px;
+    text-transform: uppercase;
+    display: inline-block;
+    transform-origin: 0 100px;
+}
+
+.space {
+    height: 360px;
+    position: relative;
+    z-index: -10;
+}
+
+
+.buy-content {
+    position: relative;
+    width: 80px;
+    height: 50px;
+    border-radius: 40px;
+    border: 2px solid rgb(40, 40, 40);
+    transition: 0.5s;
+    display: inline;
+}
+
+.buy-content:hover {
+    width: 120px;
+    border: 2px solid rgb(40, 40, 40);
+}
+
+.buy-content .next {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid rgb(40, 40, 40);
+    border-left: 2px solid rgb(40, 40, 40);
+    z-index: 1;
+    transform: translateY(-50%) rotate(135deg);
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.buy-content:hover .next {
+    opacity: 1;
+    right: 20px;
+}
+
+.buy-content .prev {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-bottom: 2px solid rgb(40, 40, 40);
+    border-right: 2px solid rgb(40, 40, 40);
+    z-index: 1;
+    transform: translateY(-50%) rotate(135deg);
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.buy-content:hover .prev {
+    opacity: 1;
+    left: 20px;
+}
+
+#box span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 46px;
+    color: brown;
+    font-size: 24px;
+    font-weight: 700;
+    user-select: none;
+    display: none;
+}
+
+.buy-btn {
+    position: relative;
+    display: inline;
+    padding: 10px 30px;
+    border-radius: 5px;
+    background: #86A697;
+    color: white;
+    letter-spacing: 1px;
+    overflow: hidden;
+}
+
+.buy-btn p {
+    position: relative;
+    z-index: 1;
+    display: inline;
+    color: rgb(216, 216, 216);
+}
+
+.buy-btn::before {
+    content:'';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: #465D4C;
+    transition: width 0.7s, height 0.7s;
+}
+
+.buy-btn:hover::before {
+    width: 240px;
+    height: 240px;
+}
+

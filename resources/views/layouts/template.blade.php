@@ -35,13 +35,9 @@
                         <a class="link" href=""><i class="fas fa-dumpster me-1"></i>
                         <span>關於我們</span></a>
                     </li>
+                    
                     <li class="nav-item d-flex justify-content-center me-4">
-                        <a class="link" href=""><i class="fas fa-bullhorn me-1"></i>
-                            <span>最新消息</span>
-                        </a>
-                    </li>
-                    <li class="nav-item d-flex justify-content-center me-4">
-                        <a class="link" href=""  style="width: 90.1875px;"><i class="fas fa-utensils me-1"></i>
+                        <a class="link" href="{{route('product.list')}}" style="width: 90.1875px;"><i class="fas fa-utensils me-1"></i>
                         <span>美味餐點</span>
                     </a>
                     </li>
@@ -96,15 +92,15 @@
         </footer>    
 
 
+    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" 
+            crossorigin="anonymous">
+    </script> --}}
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous">
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" 
-        crossorigin="anonymous">
-    </script>
 
     <script src="{{asset('js/app.js')}}"></script>
     @yield('js')
