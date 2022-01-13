@@ -17,6 +17,11 @@ class FrontController extends Controller
         return view('index');
     }
 
+    public function about()
+    {
+        return view('front.about.about');
+    }
+
     public function donutList()
     {
         $classes = Donut::where('donut_category_id','class')->get();

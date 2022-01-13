@@ -15,6 +15,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- layout Core CSS -->
     <link rel="stylesheet" href="{{asset('css/layout.css')}}">
+    {{-- sweetalert2 --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.3.3/sweetalert2.min.css">
     @yield('css')
 </head>
 
@@ -32,12 +34,12 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item d-flex justify-content-center me-4">
-                        <a class="link" href=""><i class="fas fa-dumpster me-1"></i>
+                        <a class="link" href="{{route('about')}}"><i class="fas fa-dumpster me-1"></i>
                         <span>關於我們</span>
                         </a>
                     </li>
                     <li class="nav-item d-flex justify-content-center me-4">
-                        <a class="link" href="{{route('product.list')}}" style="width: 90.1875px;"><i class="fas fa-utensils me-1"></i>
+                        <a class="link" href="{{route('product.list')}}"><i class="fas fa-utensils me-1"></i>
                         <span>美味餐點</span>
                         </a>
                     </li>
@@ -96,6 +98,16 @@
         </footer>    
 
 
+    {{-- sweetalert2 --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.3.3/sweetalert2.min.js"></script>
+    <script>
+    @if (session('message'))
+    Swal.fire({
+        icon: 'error',
+        title: '{{session('message')}}',
+    })
+    @endif
+    </script>
     {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" 
             integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" 
             crossorigin="anonymous">

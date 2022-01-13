@@ -2,6 +2,8 @@
 @section('title','宅配限定')
 
 @section('css')
+{{-- sweetalert2 --}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.3.3/sweetalert2.min.css">
 <link rel="stylesheet" href="{{asset('css/donut-list.css')}}">
 @endsection
 
@@ -73,7 +75,7 @@
                     <div id="collapseOne" class="accordion-collapse collapse show " aria-labelledby="headingOne">
                         <div class="accordion-body d-flex flex-wrap justify-content-between">
                             @foreach ($classes as $class)
-                            <div class="card mb-3" style="max-width: 540px;">
+                            <div class="card mb-3" style="max-width: 600px;">
                                 <div class="row g-0">
                                     <div class="col-md-4">
                                         <img src="{{Storage::url($class->image_url)}}"
@@ -83,17 +85,17 @@
                                         <div class="card-body">
                                             <h5 class="card-title">{{$class->name}}</h5>
                                             <p class="card-text">{{$class->description}}</p>
-                                            <p class="card-text"><small class="text-muted">NT${{$class->price}}</small></p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="buy-content">
-                                                    <div class="prev calc-btn" onclick="prevNum()"></div>
-                                                    <div class="next calc-btn" onclick="nextNum()"></div>
-                                                    <div class="box" type="text" min="1" value="1"></div>
+                                            <p class="card-text fs-4">NT${{$class->price}}</p>
+                                            <div class="d-flex justify-content-end align-items-center">
+                                                <div class="qty-setting">
+                                                    <div class="minus">-</div>
+                                                    <input class="qty" min="1" value="1" type="text">
+                                                    <div class="plus">+</div>
                                                 </div>
                                                 <div class="d-flex align-items-center">
                                                     <i class="far fa-heart me-2"
-                                                    style="font-size: 26px; cursor: pointer;;"></i>
-                                                    <a href="" class="buy-btn text-decoration-none">加入購物車</a>
+                                                    style="font-size: 26px; cursor: pointer;"></i>
+                                                    <button data-id="{{$class->id}}" type="submit" class="buy-btn text-decoration-none add-cart">加入購物車</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -115,7 +117,7 @@
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
                     <div class="accordion-body d-flex flex-wrap justify-content-between">
                         @foreach ($tastes as $taste)
-                        <div class="card mb-3" style="max-width: 540px;">
+                        <div class="card mb-3" style="max-width: 600px;">
                             <div class="row g-0">
                                 <div class="col-md-4">
                                     <img src="{{Storage::url($taste->image_url)}}"
@@ -125,17 +127,17 @@
                                     <div class="card-body">
                                         <h5 class="card-title">{{$taste->name}}</h5>
                                         <p class="card-text">{{$taste->description}}</p>
-                                        <p class="card-text"><small class="text-muted">NT${{$taste->price}}</small></p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="buy-content">
-                                                <div class="prev calc-btn" onclick="prevNum()"></div>
-                                                <div class="next calc-btn" onclick="nextNum()"></div>
-                                                <div class="box"></div>
+                                        <p class="card-text fs-4">NT${{$taste->price}}</p>
+                                        <div class="d-flex justify-content-end align-items-center">
+                                            <div class="qty-setting">
+                                                <div class="minus">-</div>
+                                                <input class="qty" min="1" value="1" type="text">
+                                                <div class="plus">+</div>
                                             </div>
                                             <div class="d-flex align-items-center">
                                                 <i class="far fa-heart me-2"
-                                                style="font-size: 26px; cursor: pointer;;"></i>
-                                                <a href="" class="buy-btn text-decoration-none">加入購物車</a>
+                                                style="font-size: 26px; cursor: pointer;"></i>
+                                                <button data-id="{{$taste->id}}" type="submit" class="buy-btn text-decoration-none add-cart">加入購物車</button>
                                             </div>
                                         </div>
                                     </div>
@@ -157,7 +159,7 @@
             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
                 <div class="accordion-body d-flex flex-wrap justify-content-between">
                     @foreach ($colors as $colorful)
-                    <div class="card mb-3" style="max-width: 540px;">
+                    <div class="card mb-3" style="max-width: 600px;">
                         <div class="row g-0">
                             <div class="col-md-4">
                                 <img src="{{Storage::url($colorful->image_url)}}"
@@ -167,17 +169,17 @@
                                 <div class="card-body">
                                     <h5 class="card-title">{{$colorful->name}}</h5>
                                     <p class="card-text">{{$colorful->description}}</p>
-                                    <p class="card-text"><small class="text-muted">NT${{$colorful->price}}</small></p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="buy-content">
-                                            <div class="prev calc-btn" onclick="prevNum()"></div>
-                                            <div class="next calc-btn" onclick="nextNum()"></div>
-                                            <div class="box"></div>
+                                    <p class="card-text fs-4">NT${{$colorful->price}}</p>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <div class="qty-setting">
+                                            <div class="minus">-</div>
+                                            <input class="qty" min="1" value="1" type="text">
+                                            <div class="plus">+</div>
                                         </div>
                                         <div class="d-flex align-items-center">
                                             <i class="far fa-heart me-2"
-                                            style="font-size: 26px; cursor: pointer;;"></i>
-                                            <a href="" class="buy-btn text-decoration-none">加入購物車</a>
+                                            style="font-size: 26px; cursor: pointer;"></i>
+                                            <button data-id="{{$colorful->id}}" type="submit" class="buy-btn text-decoration-none add-cart">加入購物車</button>
                                         </div>
                                     </div>
                                 </div>
@@ -193,7 +195,17 @@
 @endsection
 
 @section('js')
-<!-- 甜甜圈左上角裝飾 開始 -->
+{{-- sweetalert2 --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.3.3/sweetalert2.min.js"></script>
+<script>
+    @if (session('message'))
+    Swal.fire({
+        icon: 'error',
+        title: '{{session('message')}}',
+    })
+    @endif
+</script>
+{{--  甜甜圈左上角裝飾 開始  --}}
 <script>
     const text = document.querySelector('.donut-text');
     text.innerHTML = text.textContent.replace(/\S/g,
@@ -207,25 +219,63 @@
 <!-- 甜甜圈左上角裝飾 結束 -->
 
 <!-- 數量增減動畫 開始 -->
-<script type="text/javascript">
-    var numbers = document.querySelectorAll('.box');
-    numbers.forEach(number => {
-        
-    });
+<script>
 
 </script>
 <!-- 數量增減動畫 結束 -->
 
 <!-- 加入購物車按紐 開始 -->
 <script>
-    const btn = document.querySelectorAll('.buy-btn');
-    btn.onmousemove = function (e) {
-        const x = e.pageX - btn.offsetLeft;
-        const y = e.pageY - btn.offsetTop;
+    // const btn = document.querySelectorAll('.buy-btn');
+    // btn.onmousemove = function (e) {
+    //     const x = e.pageX - btn.offsetLeft;
+    //     const y = e.pageY - btn.offsetTop;
 
-        btn.style.setProperty('--x', x + 'px');
-        btn.style.setProperty('--y', y + 'px');
-    }
+    //     btn.style.setProperty('--x', x + 'px');
+    //     btn.style.setProperty('--y', y + 'px');
+    // }
+        // foreach.function (水果盒裡的每個水果,水果盒裡的水果位置)
+
+        const plusElements = document.querySelectorAll('.plus');
+        const minusElements = document.querySelectorAll('.minus');
+        const inputElements = document.querySelectorAll('.qty');
+        const addCartElements = document.querySelectorAll('.add-cart');
+        plusElements.forEach( function(plusElement,index) {
+            plusElement.addEventListener('click',function(){
+                inputElements[index].value = Number(inputElements[index].value) + 1;
+            }); 
+        });
+        minusElements.forEach( function(minusElement,index) {
+            minusElement.addEventListener('click',function(){
+                if (inputElements[index].value > 1) {
+                    inputElements[index].value = Number(inputElements[index].value) - 1;
+                };
+            });
+        });
+        addCartElements.forEach( function(addCartElement,index){
+            addCartElement.addEventListener('click',function(){
+                // 產品ID
+                let productId = this.getAttribute('data-id');
+                // 產品數量
+                let qty = inputElements[index].value;
+                let formData = new FormData();
+                formData.append('_token','{{csrf_token()}}');
+                formData.append('id',productId);
+                formData.append('qty',qty);
+                // fetch
+                let url = '{{route('shopping-cart.add')}}';
+                fetch(url,{
+                    'method' : 'post',
+                    'body' : formData
+                }).then(function(response){
+                    return response.text();
+                }).then(function(data){
+                    if (data == 'success') {
+                        alert('加入成功');
+                    }
+                });
+            });
+        });
 </script>
 <!-- 加入購物車按紐 結束 -->
 @endsection

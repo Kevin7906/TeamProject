@@ -22,7 +22,7 @@ use App\Http\Controllers\ShoppingCartController;
 Route::get('/',[FrontController::class,'index'])->name('index');
 
 // 關於我們
-
+Route::get('/about',[FrontController::class,'about'])->name('about');
 
 // 菜單
 Route::get('/product',[FrontController::class,'productList'])->name('product.list');

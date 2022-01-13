@@ -20,7 +20,7 @@
                             <img class="food__image"
                                 src="{{asset('images/menu/products/sandwich-日式原味玉子燒.jpg')}}" alt="">
                             <div class="food__text">
-                                <h3 class="fw-bold food__title">日式原味玉子燒</h3>
+                                <h2 class="fw-bold food__title" style="width: 260px">日式原味玉子燒</h2>
                                 <p class="fw-bold food__body"> 選用葉黃素雞蛋製作並以北海道昆布柴魚高湯為基底再搭配完美調味醬汁比例混合，一層一層慢火香煎配上特製美乃滋成就經典。
                                 </p>
                             </div>
@@ -29,7 +29,7 @@
                             <img class="food__image"
                                 src="{{asset('images/menu/products/sandwich-千層豬排玉子燒.jpeg')}}" alt="">
                             <div class="food__text">
-                                <h3 class="fw-bold food__title">千層豬排玉子燒</h3>
+                                <h2 class="fw-bold food__title" style="width: 260px">千層豬排玉子燒</h2>
                                 <p class="fw-bold food__body"> 嚴選台灣履歷豬五花肉片裹上玉子燒一層一層堆疊且經過油炸變得金黃酥脆，再搭配自製豬排秘汁醬及特製美乃滋醬，擁有絕妙多汁口感。
                                 </p>
                             </div>
@@ -38,7 +38,7 @@
                             <img class="food__image"
                                 src="{{asset('images/menu/products/sandwich-復刻日式蛋沙拉三明治.jpeg')}}" alt="">
                             <div class="food__text">
-                                <h5 class="fw-bold food__title">復刻日式蛋沙拉</h5>
+                                <h2 class="fw-bold food__title" style="width: 260px">復刻日式蛋沙拉</h2>
                                 <p class="fw-bold food__body"> 完美復刻日式經典口味蛋沙拉，讓你一口咬下彷彿置身在日本，是一道不能錯過的國民日式三明治。
                                 </p>
                             </div>
@@ -49,7 +49,7 @@
                             <img class="food__image"
                                 src="{{asset('images/menu/products/sandwich-花醬起司玉子燒.jpeg')}}" alt="">
                             <div class="food__text">
-                                <h4 class="fw-bold food__title">花醬雙起司玉子燒</h4>
+                                <h2 class="fw-bold food__title" style="width: 300px">花醬雙起司玉子燒</h2>
                                 <p class="fw-bold food__body"> 「莫札里拉起司」以及「切達起司」與玉子燒完美融合，再以新竹福源花生醬作為三明治基底，這般甜鹹的口味，點一份就對了!
                                 </p>
                             </div>
@@ -58,7 +58,7 @@
                             <img class="food__image"
                                 src="{{asset('images/menu/products/大海干貝香蒜起司厚切丹麥.jpg')}}" alt="">
                             <div class="food__text">
-                                <h4 class="fw-bold food__title">大海干貝香蒜起司厚切丹麥</h4>
+                                <h2 class="fw-bold food__title" style="width: 450px">大海干貝香蒜起司厚切丹麥</h2>
                                 <p class="fw-bold food__body"> 由麵包職人量身打造的27層厚丹麥不僅奶香十足酥脆100%，再搭配嚴選美國極致干貝加上特調自製香蒜起司濃郁醬，濃濃蒜香刺激你的味蕾，如果你是香蒜控這將是你唯一的選擇。
                                 </p>
                             </div>
@@ -108,7 +108,7 @@
                             </div>
                         </div>
                     </div>
-                        <div class="col-md-4 menu-img image-classic image-active" data-image="仙女紅茶" style="background-image:url({{asset('images/menu/products/drink-仙女紅茶.png')}})"></div>
+                        <div class="col-md-4 menu-img image-classic image-active" data-image="仙女紅茶" style="background-image:url({{asset('images/menu/products/drink-仙女紅茶.png')}}); background-position: right;"></div>
                         <div class="col-md-4 menu-img image-classic" data-image="紅玉紅茶" style="background-image: url({{asset('images/menu/products/drink-紅玉紅茶.jpg')}})"></div>
                         <div class="col-md-4 menu-img image-classic" data-image="研磨豆漿" style="background-image: url({{asset('images/menu/products/drink-研磨豆漿.jpg')}})"></div>
                         <div class="col-md-4 menu-img image-classic" data-image="可爾必思" style="background-image: url({{asset('images/menu/products/drink-可爾必思.jpg')}})"></div>

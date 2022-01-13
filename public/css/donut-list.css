@@ -49,14 +49,14 @@
     transform-origin: 0 100px;
 }
 
-.space {
+/* .space {
     height: 360px;
     position: relative;
     z-index: -10;
-}
+} */
 
 
-.buy-content {
+/* .buy-content {
     position: relative;
     width: 80px;
     height: 50px;
@@ -64,14 +64,14 @@
     border: 2px solid rgb(40, 40, 40);
     transition: 0.5s;
     display: inline;
-}
+} */
 
-.buy-content:hover {
+/* .buy-content:hover {
     width: 120px;
     border: 2px solid rgb(40, 40, 40);
-}
+} */
 
-.buy-content .next {
+/* .buy-content .next {
     position: absolute;
     top: 50%;
     right: 30px;
@@ -85,14 +85,14 @@
     cursor: pointer;
     opacity: 0;
     transition: 0.5s;
-}
+} */
 
-.buy-content:hover .next {
+/* .buy-content:hover .next {
     opacity: 1;
     right: 20px;
-}
+} */
 
-.buy-content .prev {
+/* .buy-content .prev {
     position: absolute;
     top: 50%;
     left: 30px;
@@ -106,14 +106,14 @@
     cursor: pointer;
     opacity: 0;
     transition: 0.5s;
-}
+} */
 
-.buy-content:hover .prev {
+/* .buy-content:hover .prev {
     opacity: 1;
     left: 20px;
-}
+} */
 
-#box span {
+/* #box span {
     position: absolute;
     display: block;
     width: 100%;
@@ -125,11 +125,11 @@
     font-weight: 700;
     user-select: none;
     display: none;
-}
+} */
 
-.buy-content span:nth-child(1) {
+/* .buy-content span:nth-child(1) {
     display: initial;
-    }
+    } */
 
 .buy-btn {
     position: relative;
@@ -166,3 +166,30 @@
     transform: skewX(-45deg) translateX(13.5em);
     transition: all 0.5s ease-in-out;
 }
+
+/* 開始 */
+.qty-setting{
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    line-height: 1;
+    margin-right: 30px;
+}
+
+.qty{
+    width: 70px;
+    text-align: center;
+    margin: 0 10px;
+
+}
+.minus,.plus{
+    font-size: 45px;
+    cursor: pointer;
+    text-align: center;
+
+}
+.add-cart{
+    border: 0;
+}
+
+/* 結束 */

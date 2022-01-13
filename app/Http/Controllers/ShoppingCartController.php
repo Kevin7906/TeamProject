@@ -24,7 +24,7 @@ class ShoppingCartController extends Controller
                 'image_url' =>$dount->image_url,
             )
         ));
-        return 'succsee';
+        return 'success';
     }
     
     public function step01()
