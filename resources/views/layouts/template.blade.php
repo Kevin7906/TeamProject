@@ -33,25 +33,29 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item d-flex justify-content-center me-4">
                         <a class="link" href=""><i class="fas fa-dumpster me-1"></i>
-                        <span>關於我們</span></a>
+                        <span>關於我們</span>
+                        </a>
                     </li>
-                    
                     <li class="nav-item d-flex justify-content-center me-4">
                         <a class="link" href="{{route('product.list')}}" style="width: 90.1875px;"><i class="fas fa-utensils me-1"></i>
                         <span>美味餐點</span>
-                    </a>
+                        </a>
                     </li>
                     <li class="nav-item d-flex justify-content-center me-4">
                         <a class="link" href="{{route('location.list')}}"><i class="fas fa-comments me-1"></i>
                         <span>聯絡我們</span>
-                    </a>
+                        </a>
                     </li>
                     <li class="nav-item d-flex justify-content-center">
-                        <a class="link" href="{{route('donut.list')}}"><i class="fas fa-shopping-cart me-1"></i>
+                        <a class="link" href="{{route('donut.list')}}"><i class="fas fa-truck"></i>
                         <span>宅配限定</span>
-                    </a>
+                        </a>
                     </li>
-
+                    <li class="nav-item d-flex justify-content-center">
+                        <a class="nav-link" href="{{route('shopping-cart.step01')}}">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
