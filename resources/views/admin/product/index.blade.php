@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.update')
 
 @section('css')
 <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
@@ -11,12 +11,15 @@
 
 @endsection
 
+@section('title')
+    <h2 class="backend-title">產品管理</h2>
+@endsection
+
 @section('main')
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
-                <h2 class="card-header">產品管理</h2>
                 <div class="form-group pt-4 px-3 m-0">
                     <a href="{{route('products.create')}}" class="btn btn-success">新增產品</a>
                 </div>

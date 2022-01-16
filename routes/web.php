@@ -35,7 +35,7 @@ Route::get('/location',[FrontController::class,'locationList'])->name('location.
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class,'index'])->name('home');
 
 // 購物車
 Route::prefix('/shopping-cart')->group(function () {

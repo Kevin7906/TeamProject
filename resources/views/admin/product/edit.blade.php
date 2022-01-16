@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.update')
 @section('css')
 <style>
     .img{

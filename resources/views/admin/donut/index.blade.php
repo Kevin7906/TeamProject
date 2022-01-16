@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.update')
 
 @section('css')
 <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
@@ -7,8 +7,14 @@
             text-align: center;
             vertical-align: middle;
         }
+    
+
 </style>
 
+@endsection
+
+@section('title')
+    <h2 class="backend-title">甜甜圈管理</h2>
 @endsection
 
 @section('main')
@@ -16,7 +22,6 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
-                <h2 class="card-header">甜甜圈管理</h2>
                 <div class="form-group pt-4 px-3 m-0">
                     <a href="{{route('donuts.create')}}" class="btn btn-success">新增甜甜圈</a>
                 </div>
