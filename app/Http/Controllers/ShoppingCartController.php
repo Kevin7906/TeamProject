@@ -5,14 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Donut;
 use App\Models\Order;
 use App\Models\OrderDetail;
+use Darryldecode\Cart\Cart;
 use Illuminate\Http\Request;
 
 class ShoppingCartController extends Controller
 {
     public function add(Request $request)
     {
-
-        
         $donut = Donut::find($request->id);
         
         \Cart::add(array(
@@ -24,6 +23,29 @@ class ShoppingCartController extends Controller
                 'image_url' =>$donut->image_url,
             )
         ));
+        return 'success';
+    }
+
+    public function update(Request $request)
+    {
+        $donut = Donut::find($request->id);
+
+        \Cart::update($donut->id, array(
+            'quantity' => array(
+                'relative' => false,
+                'value' => $request->qty
+            ),
+        ));
+
+        $item = \Cart::get($donut->id);
+
+        return $item;
+    }
+
+    public function delete(Request $request)
+    {
+        \Cart::remove($request->id);
+
         return 'success';
     }
     
@@ -67,15 +89,31 @@ class ShoppingCartController extends Controller
 
         $items = \Cart::getContent();
         foreach ($items as $item) {
-            $product = Donut::find($item->id);
+            $donut = Donut::find($item->id);
             OrderDetail::create([
                 'order_id'=>$order->id,
-                'donut_id'=>$product->id,
-                'name'=>$product->name,
-                'price'=>$product->price,
+                'donut_id'=>$donut->id,
+                'name'=>$donut->name,
+                'price'=>$donut->price,
                 'qty'=>$item->quantity,
-                'image_url'=>$product->image_url,
+                'image_url'=>$donut->image_url,
             ]);
+
+            $new_ary = [
+                'name' => $donut->name,
+                'qty' => $item->quantity,
+                'price' => $donut->price,
+                'unit' =>'個'
+            ];
+            array_push($itemInfo, $new_ary);
+
+            $new_ary = [
+                'name' => '運費',
+                'qty' => 1,
+                'price' => 60,
+                'unit' =>'個'
+            ];
+            array_push($itemInfo, $new_ary);
         }
         // 交易完成，清除訂單
         \Cart::clear();

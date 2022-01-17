@@ -44,7 +44,7 @@
             <li class="totalRow"><span class="label">運費</span><span class="value" id="change">$60</span></li>
             <li class="totalRow final"><span class="label">總計</span><span class="value"
                         id="total">${{number_format($subtotal ?? \Cart::getTotal()+60)}}</span></li>
-            <li class="totalRow"><a href="{{route('shopping-cart.step02')}}" class="btn continue">下一步</a></li>
+            <li class="totalRow"><a href="#" class="btn continue" id="next">下一步</a></li>
           </ul>
         </div>   
     </div>

@@ -266,7 +266,8 @@ html, body, div, span, applet, object, iframe,
   }
 
   * {
-    box-sizing: border-box;
+      box-sizing: border-box;
+      font-family: 'SentyMARUKO 新蒂小丸子体';
   }
 
   body {
@@ -296,22 +297,6 @@ html, body, div, span, applet, object, iframe,
     margin: 0 auto;
     padding: 5% 0;
     margin-bottom: 5em;
-  }
-
-  .projTitle {
-    font-weight: bold;
-    text-align: center;
-    font-size: 2em;
-    padding: 1em 0;
-    border-bottom: 1px solid #dadada;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-  }
-  .projTitle span {
-    font-weight: normal;
-    font-style: italic;
-    text-transform: lowercase;
-    color: #777;
   }
 
   .heading {
@@ -383,11 +368,7 @@ html, body, div, span, applet, object, iframe,
     display: table-cell;
     vertical-align: middle;
   }
-  .cart .items .cartSection .itemNumber {
-    font-size: .75em;
-    color: #777;
-    margin-bottom: .5em;
-  }
+  
   .cart .items .cartSection h3 {
     font-size: 1em;
     font-weight: bold;
@@ -403,15 +384,7 @@ html, body, div, span, applet, object, iframe,
     font-weight: bold;
     color: #333;
   }
-  .cart .items .cartSection p.stockStatus {
-    color: #5eaa5f;
-    font-weight: bold;
-    padding: .5em 0 0 1em;
-    text-transform: uppercase;
-  }
-  .cart .items .cartSection p.stockStatus.out {
-    color: #ee3239;
-  }
+  
   .cart .items .cartSection .itemImg {
     width: 4em;
     float: left;
@@ -446,23 +419,7 @@ html, body, div, span, applet, object, iframe,
     font-size: 24px;
   }
 
-  .special {
-    display: block;
-  }
-  .special .specialContent {
-    padding: 1em 1em 0;
-    display: block;
-    margin-top: .5em;
-    border-top: 1px solid #dadada;
-  }
-  .special .specialContent:before {
-    content: "\21b3";
-    font-size: 1.5em;
-    margin-right: 1em;
-    color: #6f6f6f;
-  }
-
-  a.remove {
+  .remove {
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
@@ -474,45 +431,8 @@ html, body, div, span, applet, object, iframe,
     line-height: .85;
     transition: all 0.25s linear;
   }
-  a.remove:hover {
+  .remove:hover {
     background: #f30;
-  }
-
-  .promoCode {
-    border: 2px solid #efefef;
-    float: left;
-    width: 35%;
-    padding: 2%;
-  }
-  .promoCode label {
-    display: block;
-    width: 100%;
-    font-style: italic;
-    font-size: 1.15em;
-    margin-bottom: .5em;
-    letter-spacing: -.025em;
-  }
-  .promoCode input {
-    width: 85%;
-    font-size: 1em;
-    padding: .5em;
-    float: left;
-    border: 1px solid #dadada;
-  }
-  .promoCode input:active, .promoCode input:focus {
-    outline: 0;
-  }
-  .promoCode a.btn {
-    float: left;
-    width: 15%;
-    padding: .75em 0;
-    border-radius: 0 1em 1em 0;
-    text-align: center;
-    border: 1px solid #869dab;
-  }
-  .promoCode a.btn:hover {
-    border: 1px solid #847072;
-    background: #847072;
   }
 
   .btn:link, .btn:visited {
@@ -580,11 +500,6 @@ html, body, div, span, applet, object, iframe,
       padding: 2% 0;
     }
 
-    .projTitle {
-      font-size: 1.5em;
-      padding: 10% 5%;
-    }
-
     .heading {
       padding: 1em;
       font-size: 90%;
@@ -604,7 +519,6 @@ html, body, div, span, applet, object, iframe,
     .cart .items .cartSection.qtyWrap:before {
       content: "QTY";
       display: block;
-      font-family: "Montserrat", sans-serif;
       padding: .25em;
       font-size: .75em;
     }

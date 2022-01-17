@@ -33,22 +33,22 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item d-flex justify-content-center me-4">
+                    <li class="nav-item d-flex justify-content-center me-5">
                         <a class="link" href="{{route('about')}}"><i class="fas fa-dumpster me-1"></i>
                         <span>關於我們</span>
                         </a>
                     </li>
-                    <li class="nav-item d-flex justify-content-center me-4">
+                    <li class="nav-item d-flex justify-content-center me-5">
                         <a class="link" href="{{route('product.list')}}"><i class="fas fa-utensils me-1"></i>
                         <span>美味餐點</span>
                         </a>
                     </li>
-                    <li class="nav-item d-flex justify-content-center me-4">
+                    <li class="nav-item d-flex justify-content-center me-5">
                         <a class="link" href="{{route('location.list')}}"><i class="fas fa-comments me-1"></i>
                         <span>聯絡我們</span>
                         </a>
                     </li>
-                    <li class="nav-item d-flex justify-content-center">
+                    <li class="nav-item d-flex justify-content-center me-5">
                         <a class="link" href="{{route('donut.list')}}"><i class="fas fa-truck"></i>
                         <span>宅配限定</span>
                         </a>
