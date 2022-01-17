@@ -4,12 +4,6 @@
 
 @section('css')
 <link rel="stylesheet" href="{{asset('css/location-list.css')}}">
-{{-- <style>
-    .instagram-media
-    {
-        width:100%
-    }
-</style> --}}
 @endsection
 
 @section('main')

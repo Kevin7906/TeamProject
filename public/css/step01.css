@@ -76,14 +76,6 @@
     border-left: 40px solid #3d313f;
 }
 
-#crumbs .progress02 {
-    background: #3d313f;
-}
-
-#crumbs .progress02::after {
-    border-left: 40px solid #3d313f;
-}
-
 @media screen and (max-width: 780px) {
     #crumbs a {
         padding: 20px 10px 40px 50px;
