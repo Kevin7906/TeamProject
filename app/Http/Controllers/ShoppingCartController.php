@@ -13,15 +13,15 @@ class ShoppingCartController extends Controller
     {
 
         
-        $dount = Donut::find($request->id);
+        $donut = Donut::find($request->id);
         
         \Cart::add(array(
-            'id' => $dount->id, // ID 
-            'name' => $dount->name,
-            'price'=> $dount->price,
+            'id' => $donut->id, // ID 
+            'name' => $donut->name,
+            'price'=> $donut->price,
             'quantity' => $request->qty,
             'attributes' =>array(
-                'image_url' =>$dount->image_url,
+                'image_url' =>$donut->image_url,
             )
         ));
         return 'success';

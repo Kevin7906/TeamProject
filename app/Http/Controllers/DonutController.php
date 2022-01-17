@@ -87,7 +87,7 @@ class DonutController extends Controller
         $donut = Donut::find($id);
         if ($request->hasFile('image_url')) {
             Storage::delete($donut->imageurl);
-            $path = Storage::put('/dount',$request->image_url);
+            $path = Storage::put('/donut',$request->image_url);
         } else{
             $path = $donut->image_url;
         }
