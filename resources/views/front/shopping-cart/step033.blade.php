@@ -3,8 +3,8 @@
 @section('title','寄送資料')
 
 @section('css')
-<link rel="stylesheet" href="{{asset('css/step03.css')}}">
-{{-- <style>
+<link rel="stylesheet" href="{{asset('css/checkout.css')}}">
+<style>
     body{
         font-size: 18px;
     }
@@ -22,7 +22,7 @@
         min-width: 70px;
         font-size: 18px !important;
     }
-</style> --}}
+</style>
 @endsection
 
 @section('main')
@@ -65,19 +65,7 @@
                     </form>
                 </div>
                 <!-- 購物車的footer -->
-                {{-- @include('front.shopping-cart.shopping-cart-footer',['step'=>3]) --}}
-                <div class="subtotal cf">
-                    <ul>
-                      <li class="totalRow"><span class="label">數量</span><span class="value" id="qty">{{$totalQty ??
-                                  \Cart::getTotalQuantity()}}</span></li>
-                      <li class="totalRow"><span class="label">小計</span><span class="value"
-                                  id="subtotal">${{number_format($total ?? \Cart::getSubTotal())}}</span></li>
-                      <li class="totalRow"><span class="label">運費</span><span class="value" id="change">$60</span></li>
-                      <li class="totalRow final"><span class="label">總計</span><span class="value"
-                                  id="total">${{number_format($subtotal ?? \Cart::getTotal()+60)}}</span></li>
-                      <li class="totalRow"><button id="next" class="btn continue" >下一步</button></li>
-                    </ul>
-                </div>
+                @include('front.shopping-cart.shopping-cart-footer',['step'=>3])
             </div>
         </div>
     </div>

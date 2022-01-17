@@ -4,50 +4,62 @@
 
 @section('css')
 <link rel="stylesheet" href="{{asset('css/location-list.css')}}">
-<style>
+{{-- <style>
     .instagram-media
     {
         width:100%
     }
-</style>
+</style> --}}
 @endsection
 
 @section('main')
 <div class="w3ls_address_mail_footer_grids">
     <div class="container">
         <h2><ins><strong>店面資訊</strong></ins></h2>
-        <div class="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.736054201678!2d120.66707695057603!3d24.14590587939235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d1192f39d71%3A0x6cd3b529562cba9b!2z5LiA5Lq65LiA5Ly0IOOBqOOCguOBoOOBoQ!5e0!3m2!1szh-TW!2stw!4v1641536133857!5m2!1szh-TW!2stw"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="row">
+            <div class="col-12">
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.736054201678!2d120.66707695057603!3d24.14590587939235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d1192f39d71%3A0x6cd3b529562cba9b!2z5LiA5Lq65LiA5Ly0IOOBqOOCguOBoOOBoQ!5e0!3m2!1szh-TW!2stw!4v1641536133857!5m2!1szh-TW!2stw"
+                        width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
         </div>
-        <div class="row" style="height: 620px;">
+        <div class="row">
             <div class="facebook col-md-6 col-12">
                 <iframe
                     src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ftomohalf2020%2Fposts%2F2744483882521120&show_text=true&width=500"
-                    width="651" height="660" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    width="600" height="660" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                     allowfullscreen="true"
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
             <div class="instagram col-md-6 col-12">
-                <blockquote class="instagram-media"  data-instgrm-captioned
+                <blockquote class="instagram-media" data-instgrm-captioned
                     data-instgrm-permalink="https://www.instagram.com/p/CYZFOiNBlV2/?utm_source=ig_embed&amp;utm_campaign=loading"
-                    data-instgrm-version="14"
-                    style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);
-                margin: 1px; width:651px; padding:0; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                    data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);
+                margin: 1px; padding:0;">
                     <div style="padding:16px;">
                         <a href="https://www.instagram.com/p/CYZFOiNBlV2/?utm_source=ig_embed&amp;utm_campaign=loading"
-                            style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+                            style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
+                            target="_blank">
                             <div style=" display: flex; flex-direction: row; align-items: center;">
-                                <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div>
-                                <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
-                                    <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div>
-                                    <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div>
+                                <div
+                                    style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;">
+                                </div>
+                                <div
+                                    style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                                    <div
+                                        style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;">
+                                    </div>
+                                    <div
+                                        style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;">
+                                    </div>
                                 </div>
                             </div>
                             <div style="padding: 19% 0;"></div>
                             <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
-                                <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+                                <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1"
+                                    xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
                                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                         <g transform="translate(-511.000000, -20.000000)" fill="#000000">
                                             <g>
@@ -76,7 +88,8 @@
                                             </g>
                                         </g>
                                     </g>
-                                </svg></div>
+                                </svg>
+                            </div>
                             <div style="padding-top: 8px;">
                                 <div
                                     style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">
@@ -137,42 +150,43 @@
                 <script async src="//www.instagram.com/embed.js"></script>
             </div>
         </div>
-
-        <div class="contactright" style="background-color: #DAC9A6;">
-            <h2 class="mb-5"> <span>一人一伴 ともだち </span></h2>
-            <div class="w3ls_footer_grid_left">
-                <div class="wthree_footer_grid_left">
-                    <i class="fa fa-clock" aria-hidden="true"></i>
+        <div class="row shop-info">
+            <div class="col-12">
+                <div class="contactright" style="background-color: #DAC9A6;">
+                    <h2 class="mb-5"> <span>一人一伴 ともだち </span></h2>
+                    <div class="w3ls_footer_grid_left">
+                        <div class="wthree_footer_grid_left">
+                            <i class="fa fa-clock" aria-hidden="true"></i>
+                        </div>
+                        <span style="margin-left: 20px; font-size: 24px;">星期五~星期二 09:00~15:00，星期三、四 公休</span>
+                    </div>
+                    <div class="w3ls_footer_grid_left">
+                        <div class="wthree_footer_grid_left">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                        </div>
+                        <span style="margin-left: 20px; font-size: 24px;">04-2301-1928</span>
+                    </div>
+                    <div class="w3ls_footer_grid_left">
+                        <div class="wthree_footer_grid_left">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        </div>
+                        <span style="margin-left: 20px; font-size: 24px;">40357台中市西區向上路一段17巷1弄10號</span>
+                    </div>
+                    <div class="w3ls_footer_grid_left">
+                        <div class="wthree_footer_grid_left">
+                            <i class="far fa-envelope"></i>
+                        </div>
+                        <p>
+                            <a href="mailto:info@example.com">
+                                <span style="margin-left: 20px; font-size: 24px;">
+                                    info@example2.com
+                                </span>
+                            </a>
+                        </p>
+                    </div>
                 </div>
-                <span style="margin-left: 20px; font-size: 24px;">星期五~星期二 09:00~15:00，星期三、四 公休</span>
-            </div>
-            <div class="w3ls_footer_grid_left">
-                <div class="wthree_footer_grid_left">
-                    <i class="fa fa-phone" aria-hidden="true"></i>
-                </div>
-                <span style="margin-left: 20px; font-size: 24px;">04-2301-1928</span>
-            </div>
-            <div class="w3ls_footer_grid_left">
-                <div class="wthree_footer_grid_left">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                </div>
-                <span style="margin-left: 20px; font-size: 24px;">40357台中市西區向上路一段17巷1弄10號</span>
-            </div>
-
-            <div class="w3ls_footer_grid_left">
-                <div class="wthree_footer_grid_left">
-                    <i class="far fa-envelope"></i>
-                </div>
-                <p>
-                    <a href="mailto:info@example.com">
-                        <span style="margin-left: 20px; font-size: 24px;">
-                            info@example2.com
-                        </span>
-                    </a>
-                </p>
             </div>
         </div>
-        <div class="clearfix"> </div>
     </div>
 </div>
 @endsection

@@ -34,72 +34,10 @@
     width: 100%;
     height: 620px;
     border: none;
+    background-color: white;
     margin: 0 auto;
-    background-color: #fff;
 }
 
-h4.white-w3ls {
-    color: #fff;
-    margin-bottom: 1em;
-    font-size: 30px;
-}
-
-.multi-gd-img.multi-gd-text h4 {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    font-size: 2em;
-    color: #fff;
-    font-weight: 300;
-    letter-spacing: 10px;
-}
-
-.multi-gd-img.multi-gd-text h4 span {
-    font-weight: 700;
-    color: #2fdab8;
-}
-
-.multi-gd-img.multi-gd-text {
-    padding: 0;
-}
-
-.styled-input.agile-styled-input-top {
-    margin-top: 0;
-}
-
-.address-grid {
-    padding: 1em 0em 0 0em;
-}
-
-.contact-form {
-    background: #181919;
-    padding: 5em 3em;
-}
-
-.contact input[type="text"],
-.contact input[type="email"],
-.contact textarea {
-    font-size: 15px;
-    letter-spacing: 1px;
-    color: #fff;
-    padding: 0.5em 1em;
-    border: 0;
-    width: 100%;
-    border-bottom: 1px solid #dcdcdc;
-    background: none;
-    -webkit-appearance: none;
-    outline: none;
-}
-
-.contact textarea {
-    min-height: 8em;
-    resize: none;
-}
-
-.contactright {
-    padding: 4em;
-    position: relative;
-}
 
 .w3ls_footer_grid_left {
     margin-bottom: 2em;
@@ -107,9 +45,22 @@ h4.white-w3ls {
     align-items: center;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    height: 300px;
+    display: flex;
+    width: 100%;
+    color: rgb(216, 216, 216);
+    background: rgb(40, 40, 40);
+    text-transform: uppercase;
+}
+
 .w3ls_address_mail_footer_grids {
-margin-bottom: 300px;
-background-color: #DAC9A6;
-position: relative;
-z-index: 10;
+    margin-bottom: 300px;
+    background-color: #DAC9A6;
+    width: 100vw;
+    position: relative;
+    z-index: 10;
 }

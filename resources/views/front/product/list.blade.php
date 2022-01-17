@@ -108,7 +108,7 @@
                             </div>
                         </div>
                     </div>
-                        <div class="col-md-4 menu-img image-classic image-active" data-image="仙女紅茶" style="background-image:url({{asset('images/menu/products/drink-仙女紅茶.png')}}); background-position: right;"></div>
+                        <div class="col-md-4 menu-img image-classic image-active" data-image="仙女紅茶" style="background-image:url({{asset('images/menu/products/drink-仙女紅茶.png')}});"></div>
                         <div class="col-md-4 menu-img image-classic" data-image="紅玉紅茶" style="background-image: url({{asset('images/menu/products/drink-紅玉紅茶.jpg')}})"></div>
                         <div class="col-md-4 menu-img image-classic" data-image="研磨豆漿" style="background-image: url({{asset('images/menu/products/drink-研磨豆漿.jpg')}})"></div>
                         <div class="col-md-4 menu-img image-classic" data-image="可爾必思" style="background-image: url({{asset('images/menu/products/drink-可爾必思.jpg')}})"></div>

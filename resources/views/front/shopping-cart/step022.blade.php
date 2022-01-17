@@ -3,8 +3,8 @@
 @section('title','付款與運送方式')
 
 @section('css')
-<link rel="stylesheet" href="{{asset("css/step02.css")}}">
-{{-- <style>
+<link rel="stylesheet" href="{{asset('css/checkout.css')}}">
+<style>
     body{
         font-size: 18px;
     }
@@ -22,7 +22,7 @@
         min-width: 70px;
         font-size: 18px !important;
     }
-</style> --}}
+</style>
 @endsection
 
 @section('main')
@@ -39,32 +39,33 @@
                         <div class="form-group row py-2 px-4">
                             <div class="form-check">
                                 <input class="form-check-input m-r-3" type="radio" name="payment" id="credit-card" value="0" checked>
-                                <label class="form-check-label fs-3" for="credit-card">貨到付款</label>
+                                <label class="form-check-label fs-3" for="credit-card">信用卡付款</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input m-r-3" type="radio" name="payment" id="atm" value="1">
+                                <label class="form-check-label fs-3" for="atm">網路 ATM</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input m-r-3" type="radio" name="payment" id="cvs-code" value="2">
+                                <label class="form-check-label fs-3" for="cvs-code">超商代碼</label>
                             </div>
                         </div>
                         <h3 class="fs-2">運送方式</h3>
                         <div class="form-group row py-2 px-4">
                             <div class="form-check">
                                 <input class="form-check-input m-r-3" type="radio" name="shipment" id="home" value="0" checked>
-                                <label class="form-check-label fs-3" for="home">宅配到府</label>
-                            </div>                          
+                                <label class="form-check-label fs-3" for="home">黑貓宅配</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input m-r-3" type="radio" name="shipment" id="cvs" value="1">
+                                <label class="form-check-label fs-3" for="cvs">超商店到店</label>
+                            </div>
                         </div>
                         <button id="submit-btn" hidden></button>
                     </form>
                 <!-- 購物車的footer -->
-                {{-- @include('front.shopping-cart.shopping-cart-footer',['step'=>2]) --}}
-                <div class="subtotal cf">
-                    <ul>
-                      <li class="totalRow"><span class="label">數量</span><span class="value" id="qty">{{$totalQty ??
-                                  \Cart::getTotalQuantity()}}</span></li>
-                      <li class="totalRow"><span class="label">小計</span><span class="value"
-                                  id="subtotal">${{number_format($total ?? \Cart::getSubTotal())}}</span></li>
-                      <li class="totalRow"><span class="label">運費</span><span class="value" id="change">$60</span></li>
-                      <li class="totalRow final"><span class="label">總計</span><span class="value"
-                                  id="total">${{number_format($subtotal ?? \Cart::getTotal()+60)}}</span></li>
-                      <li class="totalRow"><button class="btn continue" id="next">下一步</button></li>
-                    </ul>
-                </div>       
+                @include('front.shopping-cart.shopping-cart-footer',['step'=>2])
+
             </div>
         </div>
     </div>

@@ -118,8 +118,8 @@
                         <h6 class="collapse-header">Other Pages:</h6>
                         <a class="collapse-item" href="404.html">404 Page</a>
                         <a class="collapse-item" href="blank.html">Blank Page</a>
-                        <a class="collapse-item" href="{{ route('donuts.index')}}">宅配管理</a>
-                        <a class="collapse-item" href="{{ route('products.index')}}">菜單管理</a>
+                        <a class="collapse-item" href="{{ route('donuts.index') }}">宅配管理</a>
+                        <a class="collapse-item" href="{{ route('products.index') }}">菜單管理</a>
                     </div>
                 </div>
             </li>

@@ -1,0 +1,216 @@
+#crumbs {
+    text-align: center;
+}
+
+#crumbs ul {
+    list-style: none;
+    display: inline-table;
+}
+
+#crumbs ul li {
+    display: inline;
+}
+
+#crumbs ul li:first-child a {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+#crumbs ul li:first-child a:before {
+    display: none;
+}
+
+#crumbs ul li:last-child a {
+    padding-right: 40px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+#crumbs ul li:last-child a:after {
+    display: none;
+}
+
+#crumbs a {
+    display: block;
+    float: left;
+    height: 50px;
+    background: #dcc1b0;
+    text-align: center;
+    padding: 30px 20px 50px 60px;
+    position: relative;
+    margin: 0 10px 0 0;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.1s linear;
+}
+
+#crumbs a::after {
+    content: "";
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 40px solid #dcc1b0;
+    position: absolute;
+    right: -40px;
+    top: 0;
+    z-index: 1;
+    transition: all 0.1s linear;
+}
+
+#crumbs a::before {
+    content: "";
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 40px solid #FFFFFB;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.1s linear;
+}
+
+#crumbs .progress01 {
+    background: #3d313f;
+}
+
+#crumbs .progress01::after {
+    border-left: 40px solid #3d313f;
+}
+
+#crumbs .progress02 {
+    background: #3d313f;
+}
+
+#crumbs .progress02::after {
+    border-left: 40px solid #3d313f;
+}
+
+#crumbs .progress03 {
+    background: #3d313f;
+}
+
+#crumbs .progress03::after {
+    border-left: 40px solid #3d313f;
+}
+
+@media screen and (max-width: 780px) {
+    #crumbs a {
+        padding: 20px 10px 40px 50px;
+        font-size: 16px;
+    }
+
+    #crumbs ul li:last-child a {
+        padding-right: 30px;
+    }
+
+    #crumbs a::after {
+        content: "";
+        border-top: 30px solid transparent;
+        border-bottom: 30px solid transparent;
+        border-left: 30px solid #3d313f;
+        right: -30px;
+    }
+
+    #crumbs a::before {
+        content: "";
+        border-top: 30px solid transparent;
+        border-bottom: 30px solid transparent;
+        border-left: 30px solid #FFFFFB;
+    }
+
+    #crumbs .progress01::after {
+        border-left: 30px solid #3d313f;
+    }
+
+    #crumbs .progress02::after {
+        border-left: 30px solid #3d313f;
+    }
+
+    #crumbs .progress03::after {
+        border-left: 30px solid #3d313f;
+    }
+
+    #crumbs .progress04::after {
+        border-left: 30px solid #3d313f;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    #crumbs a {
+        padding: 18px 5px 32px 45px;
+        font-size: 14px;
+    }
+
+    #crumbs ul li:last-child a {
+        padding-right: 20px;
+    }
+
+    #crumbs a::after {
+        content: "";
+        border-top: 25px solid transparent;
+        border-bottom: 25px solid transparent;
+        border-left: 25px solid #3d313f;
+        right: -25px;
+    }
+
+    #crumbs a::before {
+        content: "";
+        border-top: 25px solid transparent;
+        border-bottom: 25px solid transparent;
+        border-left: 25px solid #FFFFFB;
+    }
+
+    #crumbs .progress01::after {
+        border-left: 25px solid #3d313f;
+    }
+
+    #crumbs .progress02::after {
+        border-left: 25px solid #3d313f;
+    }
+
+    #crumbs .progress03::after {
+        border-left: 25px solid #3d313f;
+    }
+
+    #crumbs .progress04::after {
+        border-left: 25px solid #3d313f;
+    }
+}
+
+@media screen and (min-width: 459px) and (max-width: 630px) {
+    #crumbs a {
+        padding: 8px 5px 22px 25px;
+        font-size: 10px;
+        height: 30px;
+    }
+
+    #crumbs a::after {
+        content: "";
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 15px solid #3d313f;
+        right: -15px;
+    }
+
+    #crumbs a::before {
+        content: "";
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 15px solid #FFFFFB;
+    }
+
+    #crumbs .progress01::after {
+        border-left: 15px solid #3d313f;
+    }
+
+    #crumbs .progress02::after {
+        border-left: 15px solid #3d313f;
+    }
+
+    #crumbs .progress03::after {
+        border-left: 15px solid #3d313f;
+    }
+
+    #crumbs .progress04::after {
+        border-left: 15px solid #3d313f;
+    }
+}
