@@ -74,42 +74,43 @@
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show " aria-labelledby="headingOne">
                         <div class="accordion-body d-flex flex-wrap justify-content-between">
-                            @foreach ($classes as $class)
-                            <div class="card mb-3" style="max-width: 600px;">
-                                <div class="row g-0">
-                                    <div class="col-md-4">
-                                        <img src="{{Storage::url($class->image_url)}}"
-                                        class="img-fluid rounded-start" alt="">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">{{$class->name}}</h5>
-                                            <p class="card-text">{{$class->description}}</p>
-                                            <p class="card-text fs-4">NT${{$class->price}}</p>
-                                            <div class="d-flex justify-content-end align-items-center">
-                                                <div class="qty-setting">
-                                                    <div class="minus">-</div>
-                                                    <input class="qty" min="1" value="1" type="text">
-                                                    <div class="plus">+</div>
-                                                </div>
-                                                <div class="d-flex align-items-center">
-                                                    <i class="far fa-heart me-2"
-                                                    style="font-size: 26px; cursor: pointer;"></i>
-                                                    <button data-id="{{$class->id}}" type="submit" class="buy-btn text-decoration-none add-cart">加入購物車</button>
+                            <div class="row">
+                                @foreach ($classes as $class)
+                                <div class="card mb-3 col-12 col-xxl-6">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="{{Storage::url($class->image_url)}}"
+                                            class="img-fluid rounded-start" alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">{{$class->name}}</h5>
+                                                <p class="card-text">{{$class->description}}</p>
+                                                <p class="card-text fs-4">NT${{$class->price}}</p>
+                                                <div class="d-flex justify-content-end align-items-center">
+                                                    <div class="qty-setting">
+                                                        <div class="minus">-</div>
+                                                        <input class="qty" min="1" value="1" type="text">
+                                                        <div class="plus">+</div>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="far fa-heart me-2"
+                                                        style="font-size: 26px; cursor: pointer;"></i>
+                                                        <button data-id="{{$class->id}}" type="submit" class="buy-btn text-decoration-none add-cart">加入購物車</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                @endforeach
                             </div>
-                            @endforeach
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
                         style="color: brown;">
                         季節限定
                     </button>
