@@ -83,15 +83,15 @@
       let total = 0;
       itemElements.forEach(function (itemElement) {
           const qtyElement = itemElement.querySelector('.qty');
-          const priceElement = itemElement.querySelector('.item-total');
+          const priceElement = itemElement.parentElement.parentElement.querySelector('.item-total');
           totalQty += Number(qtyElement.value);
           subtotal += qtyElement.value * priceElement.getAttribute('data-single');
       });
       total = charge + subtotal;
 
       orderQtyElement.textContent = totalQty;
-      ordersubtotalElement.textContent = '\$${subtotal.toLocaleString()}'
-      orderTotalElement.textContent = '\$${total.toLocaleString()}'
+      ordersubtotalElement.textContent = `\$${subtotal.toLocaleString()}`
+      orderTotalElement.textContent = `\$${total.toLocaleString()}`
   }
   function itemQtyCalc(element,compute) {
       const itemElement = element.parentElement;
