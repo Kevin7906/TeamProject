@@ -28,8 +28,8 @@
                 @endphp
                 @foreach ($order->orderDetails as $orderDetail)
                 @php
-                    $totalQty += $orderDatail->qty;
-                    $totalPrice = $orderDetail->$orderDetail->price;
+                    $totalQty += $orderDetail->qty;
+                    $totalPrice = $orderDetail->price;
                     $subtotal += $totalPrice;
                 @endphp
                 <div class="d-flex justify-content-between align-items-center mt-4 pt-4 order-item">

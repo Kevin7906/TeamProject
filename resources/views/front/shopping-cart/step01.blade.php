@@ -125,6 +125,7 @@
       let qty = qtyElement.value;
       let total = price * qty;
       priceElement.textContent = `\$${total.toLocaleString()}`;
+      orderTotalCalc()
   }
   const minusElements = document.querySelectorAll('.minus');
   const plusElements = document.querySelectorAll('.plus');
@@ -141,7 +142,8 @@
   });
 
   deleteElements.forEach(function(deleteElement) {
-      deleteElement.addEventListener('chick',function(){
+      deleteElement.addEventListener('click',function(){
+        console.log(deleteElements);
         Swal.fire({
                 title: '是否刪除該商品?',
                 icon: 'warning',
@@ -176,7 +178,7 @@
         })
       });
   });
-
+  // 重新整理後更新
   orderTotalCalc();
 </script>
 @endsection

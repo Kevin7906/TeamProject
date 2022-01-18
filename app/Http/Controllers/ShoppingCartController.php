@@ -90,7 +90,7 @@ class ShoppingCartController extends Controller
         $items = \Cart::getContent();
         foreach ($items as $item) {
             $donut = Donut::find($item->id);
-            OrderDetail::create([
+            $od = OrderDetail::create([
                 'order_id'=>$order->id,
                 'donut_id'=>$donut->id,
                 'name'=>$donut->name,
@@ -98,22 +98,6 @@ class ShoppingCartController extends Controller
                 'qty'=>$item->quantity,
                 'image_url'=>$donut->image_url,
             ]);
-
-            $new_ary = [
-                'name' => $donut->name,
-                'qty' => $item->quantity,
-                'price' => $donut->price,
-                'unit' =>'個'
-            ];
-            array_push($itemInfo, $new_ary);
-
-            $new_ary = [
-                'name' => '運費',
-                'qty' => 1,
-                'price' => 60,
-                'unit' =>'個'
-            ];
-            array_push($itemInfo, $new_ary);
         }
         // 交易完成，清除訂單
         \Cart::clear();
