@@ -56,6 +56,7 @@
                     <li class="nav-item d-flex justify-content-center">
                         <a class="nav-link" href="{{route('shopping-cart.step01')}}">
                             <i class="fas fa-shopping-cart"></i>
+                            <span>購物車</span>
                         </a>
                     </li>
                 </ul>
