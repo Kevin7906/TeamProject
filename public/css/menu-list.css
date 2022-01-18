@@ -11,10 +11,10 @@
 .banner-img {
     position: relative;
     z-index: 10;
-    height: 400px;
+    height: 24vw;
     background-image: url('../images/menu/products/menu-top.jpg');
-    background-size: cover;
-    background-position-y: 47%;
+    background-size: 100%;
+    background-position-y: 89%;
 }
 
 .text-decoration {
@@ -28,7 +28,7 @@
 }
 
 .menu-img {
-    height: 100;
+    height: 19vw;
     clip-path: polygon(70% 0, 90% 5%, 100% 36%, 97% 84%, 83% 98%, 40% 100%, 14% 93%, 0 78%, 4% 21%, 18% 4%);
     background-size: cover;
     background-position: center;

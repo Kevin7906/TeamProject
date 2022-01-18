@@ -55,7 +55,7 @@
                     
                     ###每日特殊口味僅為一種,選擇日期後即可看到,若尚未出現當日特殊口味選項可打在備註,人員會替您填寫上去,謝謝</p>
                 </div>
-                <img src="https://ucarecdn.com/535ff66a-0b26-4ca0-848c-0c649e5ef0c2/" alt="" class="col-6">
+                <img src="https://ucarecdn.com/535ff66a-0b26-4ca0-848c-0c649e5ef0c2/" alt="" class="col-6" style="width: 29vw; height: 28vw; ">
             </div>
             
             <!-- 中央選購區 -->

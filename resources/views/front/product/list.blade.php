@@ -112,7 +112,7 @@
                         <div class="col-md-4 menu-img image-classic" data-image="紅玉紅茶" style="background-image: url({{asset('images/menu/products/drink-紅玉紅茶.jpg')}})"></div>
                         <div class="col-md-4 menu-img image-classic" data-image="研磨豆漿" style="background-image: url({{asset('images/menu/products/drink-研磨豆漿.jpg')}})"></div>
                         <div class="col-md-4 menu-img image-classic" data-image="可爾必思" style="background-image: url({{asset('images/menu/products/drink-可爾必思.jpg')}})"></div>
-                        <div class="col-md-4 menu-img image-classic" data-image="紐西蘭牛乳" style="background-image: url({{asset('images/menu/products/drink-紐西蘭牛乳.jpg')}})"></div>
+                        <div class="col-md-4 menu-img image-classic" data-image="紐西蘭牛乳" style="background-image: url({{asset('images/menu/products/drink-紐西蘭牛乳.jpg')}}); background-position: 76% 0;"></div>
                         <div class="col-md-4 menu-img image-classic" data-image="美式咖啡" style="background-image: url({{asset('images/menu/products/drink-美式咖啡.jpg')}})"></div>
                         <div class="col-md-4 menu-img image-classic" data-image="仙奶茶" style="background-image: url({{asset('images/menu/products/drink-鮮奶茶.jpg')}})"></div>
                 </div>
@@ -125,12 +125,12 @@
         <div class="container col-md-8">
             <div class="card mb-5 mt-5 border-0" style="max-width: 100%; background-color: rgb(249, 233, 209)">
                 <div class="row g-0">
-                    <div class="col-md-4 menu-img image-special image-active" data-image="桂花檸檬紅茶" style="background-image: url({{asset('images/menu/products/drink-桂花檸檬紅茶.jpg')}})"></div>
-                    <div class="col-md-4 menu-img image-special" data-image="黑糖奶茶" style="background-image: url({{asset('images/menu/products/special-黑糖奶茶.jpg')}})"></div>
-                    <div class="col-md-4 menu-img image-special" data-image="鹿耳島厚抹茶牛乳" style="background-image: url({{asset('images/menu/products/special-鹿耳島厚抹茶牛乳.jpg')}})"></div>
-                    <div class="col-md-4 menu-img image-special" data-image="米歇爾可可牛乳" style="background-image: url({{asset('images/menu/products/special-米歇爾可可牛乳.jpg')}})"></div>
-                    <div class="col-md-4 menu-img image-special" data-image="咖啡歐蕾" style="background-image: url({{asset('images/menu/products/special-咖啡歐蕾.jpg')}})"></div>
-                    <div class="col-md-4 menu-img image-special" data-image="季節桑椹歐蕾" style="background-image: url({{asset('images/menu/products/special-季節桑葚歐蕾.png')}})"></div>
+                    <div class="col-md-4 menu-img image-special image-active" data-image="桂花檸檬紅茶" style="background-image: url({{asset('images/menu/products/drink-桂花檸檬紅茶.png')}}); background-position: 16% 0;"></div>
+                    <div class="col-md-4 menu-img image-special" data-image="黑糖奶茶" style="background-image: url({{asset('images/menu/products/special-黑糖奶茶.jpg')}}); background-position: 35% 0;"></div>
+                    <div class="col-md-4 menu-img image-special" data-image="鹿耳島厚抹茶牛乳" style="background-image: url({{asset('images/menu/products/special-鹿耳島厚抹茶牛乳.jpg')}}); background-position: 0% 99%;"></div>
+                    <div class="col-md-4 menu-img image-special" data-image="米歇爾可可牛乳" style="background-image: url({{asset('images/menu/products/special-米歇爾可可牛乳.jpg')}}); background-size: 93%; background-repeat: no-repeat; background-position: 35% 49%;"></div>
+                    <div class="col-md-4 menu-img image-special" data-image="咖啡歐蕾" style="background-image: url({{asset('images/menu/products/special-咖啡歐蕾.jpg')}}); background-position: 54% 89%; background-size: 86%; background-repeat: no-repeat;"></div>
+                    <div class="col-md-4 menu-img image-special" data-image="季節桑椹歐蕾" style="background-image: url({{asset('images/menu/products/special-季節桑葚歐蕾.jpg')}}); background-position: 0 18%;"></div>
                     <div class="col-md-8">
                         <div class="card-body">
                             <div>
@@ -197,10 +197,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 menu-img image-soda image-active" data-image="可爾必思氣泡飲" style="background-image: url({{asset('images/menu/products/soda-可爾必思氣泡飲.jpg')}})"></div>
+                    <div class="col-md-4 menu-img image-soda image-active" data-image="可爾必思氣泡飲" style="background-image: url({{asset('images/menu/products/soda-可爾必思氣泡飲.jpg')}}); background-size: 91%; background-repeat: no-repeat; background-position: 52% 0;"></div>
                     <div class="col-md-4 menu-img image-soda " data-image="桂花柚香氣泡飲" style="background-image: url({{asset('images/menu/products/soda-柚香桂花氣泡飲.jpg')}})"></div>
-                    <div class="col-md-4 menu-img image-soda " data-image="百香檸檬氣泡飲" style="background-image: url({{asset('images/menu/products/soda-百香檸檬氣泡飲.jpg')}})"></div>
-                    <div class="col-md-4 menu-img image-soda " data-image="葡萄柚蜂蜜氣泡飲" style="background-image: url({{asset('images/menu/products/soda-葡萄柚蜂蜜氣泡飲.jpg')}})"></div>
+                    <div class="col-md-4 menu-img image-soda " data-image="百香檸檬氣泡飲" style="background-image: url({{asset('images/menu/products/soda-百香檸檬氣泡飲.jpg')}}); background-position: 0% 60%;"></div>
+                    <div class="col-md-4 menu-img image-soda " data-image="葡萄柚蜂蜜氣泡飲" style="background-image: url({{asset('images/menu/products/soda-葡萄柚蜂蜜氣泡飲.jpg')}}); background-size: 101%; background-position: 62% 82%;"></div>
                     <div class="col-md-4 menu-img image-soda " data-image="季節桑椹氣泡飲" style="background-image: url({{asset('images/menu/products/soda-季節桑葚氣泡飲.jpg')}})"></div>
                 </div>
             </div>
@@ -212,11 +212,11 @@
         <div class="container col-md-8">
             <div class="card mb-5 mt-5 border-0" style="max-width: 100%; background-color: rgb(249, 233, 209)">
                 <div class="row g-0">
-                    <div class="col-md-4 menu-img image-side-dish image-active" data-image="楔型薯塊" style="background-image: url({{asset('images/menu/products/楔型薯塊.jpg')}}); background-position-X: 100%"></div>
-                    <div class="col-md-4 menu-img image-side-dish" data-image="半熟嫩蛋" style="background-image: url({{asset('images/menu/products/半熟嫩蛋.jpg')}}); background-position-X: 100%"></div>
-                    <div class="col-md-4 menu-img image-side-dish" data-image="德國香腸" style="background-image: url({{asset('images/menu/products/德國香腸.png')}}); background-position-X: 100%"></div>
-                    <div class="col-md-4 menu-img image-side-dish" data-image="和風時蔬" style="background-image: url({{asset('images/menu/products/和風時蔬.jpg')}}); background-position-X: 100%"></div>
-                    <div class="col-md-4 menu-img image-side-dish" data-image="手工和風花枝丸（3顆）" style="background-image: url({{asset('images/menu/products/手工和風花枝丸.jpg')}}); background-position-X: 100%"></div>
+                    <div class="col-md-4 menu-img image-side-dish image-active" data-image="楔型薯塊" style="background-image: url({{asset('images/menu/products/楔型薯塊.jpg')}}); background-position: 0 32%;"></div>
+                    <div class="col-md-4 menu-img image-side-dish" data-image="半熟嫩蛋" style="background-image: url({{asset('images/menu/products/半熟嫩蛋.jpg')}}); background-size: 104%; background-repeat: no-repeat; background-position: 144% 70%;"></div>
+                    <div class="col-md-4 menu-img image-side-dish" data-image="德國香腸" style="background-image: url({{asset('images/menu/products/德國香腸.jpg')}}); background-position: 0 70%;"></div>
+                    <div class="col-md-4 menu-img image-side-dish" data-image="和風時蔬" style="background-image: url({{asset('images/menu/products/和風時蔬.jpg')}}); "></div>
+                    <div class="col-md-4 menu-img image-side-dish" data-image="手工和風花枝丸（3顆）" style="background-image: url({{asset('images/menu/products/手工和風花枝丸.jpg')}}); background-size: 95%; background-position: 42% 26%; background-repeat: no-repeat;"></div>
                     <div class="col-md-8">
                         <div class="card-body">
                             <div>
