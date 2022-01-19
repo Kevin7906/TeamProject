@@ -4,6 +4,11 @@
 
 @section('css')
 <link rel="stylesheet" href="{{asset('css/index.css')}}">
+<style>
+    main {
+        background: #fffffb;
+    }
+</style>
 @endsection
 
 @section('main')

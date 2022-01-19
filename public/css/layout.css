@@ -1,6 +1,5 @@
 body {
     font-family: 'SentyMARUKO 新蒂小丸子体';
-    background: #fffffb;
 }
 
 .nav-item a {
@@ -44,14 +43,14 @@ body {
     z-index: 1;
 }
 
-section {
+/* section {
     position: relative;
     width: 100%;
     min-height: 100vh;
     z-index: 10;
-    background: #DAC9A6;
-    margin-bottom: 300px;
-}
+    /* background: #DAC9A6; */
+    /* margin-bottom: 300px;
+} */
 
 
 
