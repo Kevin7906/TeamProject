@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一人一伴 - 首頁</title>
+    <!-- bootstrap 5.1.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+        /* 上方 banner 開始 */
+        #banner {
+            width: 100%;
+            display: flex;
+        }
+
+        #banner .img {
+            width: 70%;
+        }
+
+        #banner .img img{
+            width: 100%;
+            height: auto;
+        }
+
+        #banner .text {
+            aspect-ratio: 16 / 5;
+            width: 30%;
+            Writing-mode: vertical-rl;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #banner .text p {
+            height: 77%;
+            line-height: 64px;
+            font-size: 36px;
+            font-family: 'BiauKai';
+        }
+
+        #banner .text p span {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .ml3 {
+            font-weight: 900;
+            font-size: 3.5em;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .banner {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #banner .img {
+                width: 100%;
+            }
+
+            #banner .text {
+                aspect-ratio: 16 / 4;
+                width: 100%;
+                Writing-mode: horizontal-tb;
+            }
+
+            #banner .text p {
+                margin: 36px;
+                line-height: 44px;
+                font-size: 30px;
+            }
+
+            #banner .text p span {
+                line-height: 78px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            #banner {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        /* 上方 banner 結束 */
+
+        /* 關於一伴 開始 */
+        #about {
+            aspect-ratio: 16 / 5;
+            display: flex;
+        }
+
+        .about-img {
+            width: 50%;
+            position: relative;
+        }
+
+        .about-img img {
+            width: 80%;
+            position: absolute;
+            left: 20%;
+            top: -10%;
+            border-radius: 15px;
+        }
+
+        .about-content {
+            width: 50%;
+            margin-left: 60px;
+            margin-top: 60px;
+        }
+
+        .about-content-detail {
+            width: 70%;
+            line-height: 36px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media screen and (max-width: 1024px) {
+            #about {
+                margin-bottom: 60px;
+                align-items: center;
+            }
+
+            .about-img img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .about-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                margin-left: 0px;
+            }
+
+            .about-content-detail {
+                width: 100%;
+                line-height: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            #about {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .about-img img {
+                position: relative;
+                width: 100%;
+                border-radius: 0;
+            }
+
+            .about-img {
+                width: 100%;
+                position: relative;
+            }
+
+            .about-content {
+                width: 90%;
+            }
+        }
+        /* 關於一伴 結束 */
+        
+        /* 食材介紹 開始 */
+        .ingredients {
+            width: 100%;
+            aspect-ratio: 192 / 108;
+        }
+
+        .ingredients img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        /* 食材介紹 結束 */
+
+        /* IG 跑馬燈 開始 */
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            @keyframes marquee {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(-125%);
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            @keyframes marquee {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(-166.65%);
+                }
+            }
+        }
+
+        #marquee {
+            padding: 100px 0;
+            width: 100%;
+            aspect-ratio: 2 / 1;
+            background-color: #FFFFFB;
+        }
+
+        #marquee .view {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        #marquee .pic-container {
+            display: flex;
+            height: 600px;
+            animation: marquee 60s infinite linear;
+        }
+
+        .pic01 {
+            display: flex;
+            align-items: flex-start;
+            animation: marquee 60s infinite cubic-bezier(0,1.62,1,-0.83);
+        }
+
+        .pic02 {
+            display: flex;
+            align-items: center;
+            animation: marquee 60s infinite cubic-bezier(.87,-0.99,.19,1.99);
+        }
+
+        .pic03 {
+            display: flex;
+            align-items: flex-end;
+            animation: marquee 60s infinite cubic-bezier(.17,.67,.97,-0.16);
+        }
+
+        #marquee .pic-container .pic {
+            flex-basis: 20%;
+            flex-shrink: 0;
+            margin-right: 60px;
+        }
+
+        @media (max-width: 1024px) {
+            #marquee .pic-container .pic {
+                flex-basis: 25%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #marquee .pic-container .pic {
+                flex-basis: 33.33%;
+            }
+        }
+
+        @media (max-width: 540px) {
+            .pic {
+                align-items: flex-start;
+                animation: marquee 30s infinite linear;
+            }
+            #marquee .pic-container .pic {
+                margin-right: 10px;
+            }
+
+            #marquee .pic-container {
+                height: 100%;
+            }
+        }
+
+        #marquee img {
+            width: 100%;
+            vertical-align: middle;
+        }
+        /* IG 跑馬燈 結束 */
+
+        /* 線上預約 開始 */
+        .reservation {
+            background-color: rgb(52, 91, 78);
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .book-left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .book-left img {
+            width: 100%;
+            margin: 40px 0;
+            border-radius: 20px;
+        }
+
+        .book-right {
+            background: rgb(52, 91, 78);
+            background-size: cover;
+            padding: 64px 80px;
+        }
+
+        .book-right h2 {
+            display: flex;
+            justify-content: center;
+            color: white;
+            margin-bottom: 36px;
+        }
+
+        .book-right label {
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 6px;
+            text-align: left;
+            display: block;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        .form-right {
+            float: right;
+            width: 48%;
+        }
+
+        .form-left {
+            float: left;
+            width: 48%;
+        }
+
+        .form-right {
+            float: right;
+            width: 48%;
+        }
+
+        .book-right input[type="text"],
+        .book-right input[type="date"],
+        .book-right input[type="time"] {
+            width: 100%;
+            color: #555;
+            outline: none;
+            font-size: 16px;
+            padding: 8px 16px;
+            border: none;
+            margin-bottom: 1.5em;
+            line-height: 1.8em;
+            border-radius: 10px;
+        }
+
+        .book-right select.form-control {
+            outline: none;
+            font-size: 16px;
+            padding: 8px 16px;
+            border-radius: 0;
+            border: none;
+            height: 48px;
+            border-radius: 10px;
+        }
+
+        .book-right input[type=submit] {
+            color: #FFFFFF;
+            padding: 10px 16px;
+            font-size: 24px;
+            cursor: pointer;
+            border: 2px solid #562E37;
+            outline: none;
+            border-radius: 50px;
+            background: #562E37;
+            width: 100%;
+            line-height: 1em;
+            margin-top: 30px;
+        }
+
+        .book-right input[type=submit]:hover {
+            transition: 0.5s all ease;
+            background: #FB966E;
+            border: 2px solid #FB966E;
+        }
+        @media screen and (max-width: 1024px) {
+            .book-left {
+                margin: 0px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .reservation {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+
+            .book-left {
+                width: 100%;
+            }
+
+            .book-left img {
+                width: 100%;
+                margin-top: 40px;
+            }
+
+            .book-right {
+                width: 100%;
+            }
+        }
+        /* 線上預約 結束 */
+    </style>
+</head>
+<body>
+    <!-- 上方圖片 -->
+    <section id="banner">
+        <div class="img">
+            <img src="https://omofood.com/wp-content/uploads/20210112210740_96.jpg" alt="">
+        </div>
+        <div class="text">
+            <p class="ml3">
+                眾裡尋他千百度，<br>
+                驀然回首，<br>
+                那人卻在燈火闌珊處。<br>
+                <span>－－辛棄疾</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- 關於一伴 -->
+    <section id="about">
+        <div class="about-img">
+            <img src="https://cindypark.cc/wp-content/uploads/2020/09/1599268054-447764780-g.jpg" alt="">
+        </div>
+        <div class="about-content">
+            <div class="about-content-detail">
+                <h2>「伴」</h2>
+                <p>
+                    好吃的東西 就應該一人一半<br>
+                    一個人<br>
+                    或許很滿足<br>
+                    兩個人<br>
+                    彼此都能感到其中的幸福<br>
+                    「伴」就是一人一半，湊在一起才完整<br>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 食材介紹 -->
+    <section>
+        <div class="ingredients">
+            <img src="../../../public/images/ingredients.png" alt="">
+        </div>
+    </section>
+
+    <!-- IG 跑馬燈 -->
+    <section id="marquee">
+        <div class="view">
+            <div class="pic-container">
+                <div class="pic pic01">
+                    <img src="https://scontent.frmq2-2.fna.fbcdn.net/v/t39.30808-6/270226003_2744483509187824_8075544928197540245_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=tD8TK-siAK0AX8xmllt&_nc_ht=scontent.frmq2-2.fna&oh=00_AT9hbQW8YtBCDe0xEuBkw0ALHBnvcDA77vJHokkwfS6wzg&oe=61EB5FB1" alt="" />
+                </div>
+                <div class="pic pic02">
+                    <img src="https://scontent.frmq2-2.fna.fbcdn.net/v/t39.30808-6/266869983_2728634480772727_7878632438532399085_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=TB9VOhKx5WMAX8WdE1p&_nc_ht=scontent.frmq2-2.fna&oh=00_AT9c7_D8wP_c2XfMg1rgTnSac0TzwgO_kt4dvfPArsMkLw&oe=61EB8B3F" alt="" />
+                </div>
+                <div class="pic pic03">
+                    <img src="https://scontent.frmq2-1.fna.fbcdn.net/v/t39.30808-6/262019392_2721590004810508_6572109731237312142_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=ijndFiJKP20AX_gKCV2&_nc_ht=scontent.frmq2-1.fna&oh=00_AT84hBsdv2Ev7yB_nAAZYcT3QPRmQr8lcFR1B-GtzYFIBQ&oe=61EBF418" alt="" />
+                </div>
+                <div class="pic pic01">
+                    <img src="https://scontent.frmq2-2.fna.fbcdn.net/v/t39.30808-6/245384543_2686644474971728_4752991163201298754_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=HsaB6KoY5SIAX-GKhg7&tn=aA3LzmaFlUPnbe1m&_nc_ht=scontent.frmq2-2.fna&oh=00_AT8KDJP93LBeuwUSb2_G_nIcLqB2c-c83Xw50g4ZmlilpQ&oe=61ECBACE" alt="" />
+                </div>
+                <div class="pic pic02">
+                    <img src="https://scontent.frmq2-2.fna.fbcdn.net/v/t39.30808-6/243961901_2683004675335708_6717456387952502252_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=kqDA1xIDQAEAX--4nk0&_nc_ht=scontent.frmq2-2.fna&oh=00_AT_Y-3DUgmIHobF5M5e_DwldAPDLuAAxf29k4Qwj__N0zA&oe=61EC99AE" alt="" />
+                </div>
+                <div class="pic pic03">
+                    <img src="https://scontent.frmq2-2.fna.fbcdn.net/v/t39.30808-6/206519333_2618770058425837_7009557871633047495_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=3TsXl2it0Q4AX9bb5NS&_nc_ht=scontent.frmq2-2.fna&oh=00_AT-XCBvxYbMLB2ijQ7MoYAmRyvmHi0IdK_BpUNznRHwtIg&oe=61EBB436" alt="" />
+                </div>
+                <div class="pic pic01">
+                    <img src="https://scontent.frmq2-1.fna.fbcdn.net/v/t1.6435-9/196322203_2614852532150923_4046558925358210587_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=L8PmwHwIfD0AX8rTZgR&tn=aA3LzmaFlUPnbe1m&_nc_ht=scontent.frmq2-1.fna&oh=00_AT-4T4de5dfwKBn0x_f-Z5O_JtRcNFqwYtIIwF99AjHwRA&oe=620BA246" alt="" />
+                </div>
+                <div class="pic pic02">
+                    <img src="https://scontent.frmq2-1.fna.fbcdn.net/v/t1.6435-9/120634695_2437782326524612_1860820360676784313_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=sQkjpzb77w4AX-TBVhX&_nc_ht=scontent.frmq2-1.fna&oh=00_AT9N0tX9x7X803GYtQPysRgJAi-y-AjkJUoVRV8hv6Flqw&oe=620E8EDA" alt="" />
+                </div>
+                <div class="pic pic03">
+                    <img src="https://scontent.frmq2-1.fna.fbcdn.net/v/t1.6435-9/185295847_2591096657859844_97641736378999484_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=rRO7NWCxSH8AX_YDIaf&_nc_ht=scontent.frmq2-1.fna&oh=00_AT99j3VpnluSUI_S9kOI6yG-Yz33VKZsSc-jY27AGixDNw&oe=620DABDE" alt="" />
+                </div>
+                <div class="pic pic01">
+                    <img src="https://scontent.frmq2-1.fna.fbcdn.net/v/t1.6435-9/171770306_2570340103268833_6441646055919330019_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=ZRKw8jUyp0gAX_AanJj&_nc_oc=AQl76Q8md27m7cM6XqZJDdyAMaU9tw-42o3PkrE2-9PLNP2uWySv_dUCT1B-zsobwaU&_nc_ht=scontent.frmq2-1.fna&oh=00_AT_zG2npaJl9iQLPgxlKZ1kV9TvG-Hq5E6h-tvnQF5JZaQ&oe=620C8612" alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 線上預約 -->
+    <div class="reservation">
+        <div class="container">
+            <div class="row book-info">
+                <div class="col-6 book-left wow fadeInLeft animated" data-wow-delay=".5s">
+                    <img src="http://www.innk.com.tw/wp-content/uploads/2018/12/1_9UJO_sPcJAF0mVzN1ItqtQ.jpeg" alt="">
+                </div>
+                <div class="col-6 book-right wow fadeInRight animated" data-wow-delay=".5s">
+                    <h2 class="title wow fadeInDown animated" data-wow-delay=".5s">線上預約</h2>
+                    <form>
+                        <label for="date" class="wow fadeInDown animated" data-wow-delay=".5s">日期 :</label>
+                        <input id="date" name="date" class="wow fadeInDown animated" data-wow-delay=".5s" type="date" value="2022-01-20" min="2022-01-20" max="2022-06-20" required>
+                        <div class="form-left wow fadeInDown animated" data-wow-delay=".7s">
+                            <label>人數 :</label>
+                            <select class="form-control" required>
+                                <option>1 人</option>
+                                <option>2 人</option>
+                                <option>3 人</option>
+                                <option>4 人</option>
+                            </select>
+                        </div>
+                        <div class="form-right wow fadeInDown animated" data-wow-delay=".7s">
+                            <label>時間 :</label>
+                            <input type="time" value="09:00" min="09:00" max="14:00" required>
+                        </div>
+                        <div class="clearfix"> </div>
+                        <label class="wow fadeInDown animated" data-wow-delay=".9s">聯絡電話 :</label>
+                        <input class="wow fadeInDown animated" data-wow-delay=".9s" type="text"
+                            onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Contact';}"
+                            required="">
+                        <input type="submit" value="預訂">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+</body>
+</html>

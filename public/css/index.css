@@ -1,0 +1,412 @@
+ /* 上方 banner 開始 */
+ #banner {
+    width: 100%;
+    display: flex;
+}
+
+#banner .img {
+    width: 70%;
+}
+
+#banner .img img{
+    width: 100%;
+    height: auto;
+}
+
+#banner .text {
+    aspect-ratio: 16 / 5;
+    width: 30%;
+    Writing-mode: vertical-rl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner .text p {
+    height: 77%;
+    line-height: 64px;
+    font-size: 36px;
+    font-family: 'BiauKai';
+}
+
+#banner .text p span {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ml3 {
+    font-weight: 900;
+    font-size: 3.5em;
+}
+
+@media screen and (max-width: 1024px) {
+    .banner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #banner .img {
+        width: 100%;
+    }
+
+    #banner .text {
+        aspect-ratio: 16 / 4;
+        width: 100%;
+        Writing-mode: horizontal-tb;
+    }
+
+    #banner .text p {
+        margin: 36px;
+        line-height: 44px;
+        font-size: 30px;
+    }
+
+    #banner .text p span {
+        line-height: 78px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #banner {
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* 上方 banner 結束 */
+
+/* 關於一伴 開始 */
+#about {
+    aspect-ratio: 16 / 5;
+    display: flex;
+}
+
+.about-img {
+    width: 50%;
+    position: relative;
+}
+
+.about-img img {
+    width: 80%;
+    position: absolute;
+    left: 20%;
+    top: -10%;
+    border-radius: 15px;
+}
+
+.about-content {
+    width: 50%;
+    margin-left: 60px;
+    margin-top: 60px;
+}
+
+.about-content-detail {
+    width: 70%;
+    line-height: 36px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+    #about {
+        margin-bottom: 60px;
+        align-items: center;
+    }
+
+    .about-img img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .about-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .about-content-detail {
+        width: 100%;
+        line-height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #about {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-img img {
+        position: relative;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .about-img {
+        width: 100%;
+        position: relative;
+    }
+
+    .about-content {
+        width: 90%;
+    }
+}
+/* 關於一伴 結束 */
+
+/* 食材介紹 開始 */
+.ingredients {
+    width: 100%;
+    aspect-ratio: 192 / 108;
+}
+
+.ingredients img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+/* 食材介紹 結束 */
+
+/* IG 跑馬燈 開始 */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 1024px) {
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-125%);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-166.65%);
+        }
+    }
+}
+
+#marquee {
+    padding: 100px 0;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    background-color: #FFFFFB;
+}
+
+#marquee .view {
+    overflow: hidden;
+    width: 100%;
+}
+
+#marquee .pic-container {
+    display: flex;
+    height: 600px;
+    animation: marquee 60s infinite linear;
+}
+
+.pic01 {
+    display: flex;
+    align-items: flex-start;
+    animation: marquee 60s infinite cubic-bezier(0,1.62,1,-0.83);
+}
+
+.pic02 {
+    display: flex;
+    align-items: center;
+    animation: marquee 60s infinite cubic-bezier(.87,-0.99,.19,1.99);
+}
+
+.pic03 {
+    display: flex;
+    align-items: flex-end;
+    animation: marquee 60s infinite cubic-bezier(.17,.67,.97,-0.16);
+}
+
+#marquee .pic-container .pic {
+    flex-basis: 20%;
+    flex-shrink: 0;
+    margin-right: 60px;
+}
+
+@media (max-width: 1024px) {
+    #marquee .pic-container .pic {
+        flex-basis: 25%;
+    }
+}
+
+@media (max-width: 768px) {
+    #marquee .pic-container .pic {
+        flex-basis: 33.33%;
+    }
+}
+
+@media (max-width: 540px) {
+    .pic {
+        align-items: flex-start;
+        animation: marquee 30s infinite linear;
+    }
+    #marquee .pic-container .pic {
+        margin-right: 10px;
+    }
+
+    #marquee .pic-container {
+        height: 100%;
+    }
+}
+
+#marquee img {
+    width: 100%;
+    vertical-align: middle;
+}
+/* IG 跑馬燈 結束 */
+
+/* 線上預約 開始 */
+.reservation {
+    background-color: rgb(52, 91, 78);
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.book-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-left img {
+    width: 100%;
+    margin: 40px 0;
+    border-radius: 20px;
+}
+
+.book-right {
+    background: rgb(52, 91, 78);
+    background-size: cover;
+    padding: 64px 80px;
+}
+
+.book-right h2 {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-bottom: 36px;
+}
+
+.book-right label {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 6px;
+    text-align: left;
+    display: block;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.form-right {
+    float: right;
+    width: 48%;
+}
+
+.form-left {
+    float: left;
+    width: 48%;
+}
+
+.form-right {
+    float: right;
+    width: 48%;
+}
+
+.book-right input[type="text"],
+.book-right input[type="date"],
+.book-right input[type="time"] {
+    width: 100%;
+    color: #555;
+    outline: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    margin-bottom: 1.5em;
+    line-height: 1.8em;
+    border-radius: 10px;
+}
+
+.book-right select.form-control {
+    outline: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 0;
+    border: none;
+    height: 48px;
+    border-radius: 10px;
+}
+
+.book-right input[type=submit] {
+    color: #FFFFFF;
+    padding: 10px 16px;
+    font-size: 24px;
+    cursor: pointer;
+    border: 2px solid #562E37;
+    outline: none;
+    border-radius: 50px;
+    background: #562E37;
+    width: 100%;
+    line-height: 1em;
+    margin-top: 30px;
+}
+
+.book-right input[type=submit]:hover {
+    transition: 0.5s all ease;
+    background: #FB966E;
+    border: 2px solid #FB966E;
+}
+@media screen and (max-width: 1024px) {
+    .book-left {
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .reservation {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .book-left {
+        width: 100%;
+    }
+
+    .book-left img {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .book-right {
+        width: 100%;
+    }
+}
+/* 線上預約 結束 */
