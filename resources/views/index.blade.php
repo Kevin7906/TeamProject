@@ -7,18 +7,18 @@
 @endsection
 
 @section('main')
-    <!-- 上方圖片 -->
-    <section id="banner">
+     <!-- 上方圖片 -->
+     <section id="banner">
         <div class="img">
             <img src="https://omofood.com/wp-content/uploads/20210112210740_96.jpg" alt="">
         </div>
         <div class="text">
-            <p class="ml3">
-                眾裡尋他千百度，<br>
-                驀然回首，<br>
-                那人卻在燈火闌珊處。<br>
-                <span>－－辛棄疾</span>
-            </p>
+            <div class="text-p">
+                <p class="ml3">眾裡尋他千百度，</p> 
+                <p class="ml4">驀然回首，</p> 
+                <p class="ml5">那人卻在燈火闌珊處。</p> 
+                <p class="ml6 .p2">－－辛棄疾</p>
+            </div>
         </div>
     </section>
 
@@ -45,7 +45,7 @@
     <!-- 食材介紹 -->
     <section>
         <div class="ingredients">
-            <img src="{{asset('images/index-background.jpeg')}}" alt="">
+            <img src="../../../public/images/ingredients.png" alt="">
         </div>
     </section>
 
@@ -126,5 +126,78 @@
 @endsection
 
 @section('js')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script>
+    var textWrapper = document.querySelector('.ml3');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
     
+    anime.timeline({loop: true})
+    .add({
+        targets: '.ml3 .letter',
+        opacity: [0,1],
+        easing: "easeInOutQuad",
+        duration: 2400,
+        delay: (el, i) => 200 * (i+1)
+    }).add({
+        targets: '.ml3',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 600000
+    });
+    
+    var textWrapper = document.querySelector('.ml4');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    
+    anime.timeline({loop: true})
+    .add({
+        targets: '.ml4 .letter',
+        opacity: [0,1],
+        easing: "easeInOutQuad",
+        duration: 1500,
+        delay: (el, i) => 200 * (i+11)
+    }).add({
+        targets: '.ml4',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 600000
+    });
+    
+    var textWrapper = document.querySelector('.ml5');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    
+    anime.timeline({loop: true})
+    .add({
+        targets: '.ml5 .letter',
+        opacity: [0,1],
+        easing: "easeInOutQuad",
+        duration: 3000,
+        delay: (el, i) => 200 * (i+17)
+    }).add({
+        targets: '.ml5',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 600000
+    });
+
+    var textWrapper = document.querySelector('.ml6');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    
+    anime.timeline({loop: true})
+    .add({
+        targets: '.ml6 .letter',
+        opacity: [0,1],
+        easing: "easeInOutQuad",
+        duration: 3000,
+        delay: (el, i) => 200 * (i+28)
+    }).add({
+        targets: '.ml6',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 600000
+    });
+</script>
 @endsection

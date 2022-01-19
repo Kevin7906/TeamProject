@@ -1,9 +1,8 @@
- body {
-    background: #fffffb;
- }
-
- /* 上方 banner 開始 */
- #banner {
+body {
+    background-color: #fffffb;
+}
+/* 上方 banner 開始 */
+#banner {
     width: 100%;
     display: flex;
 }
@@ -24,23 +23,39 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#banner .text p {
-    height: 77%;
-    line-height: 64px;
-    font-size: 36px;
     font-family: 'BiauKai';
+    font-size: 36px;
 }
 
-#banner .text p span {
+.text-p {
+    height: 80%;
+}
+
+.ml3, .ml4, .ml5 {
+    font-weight: 900;
+    height: 77%;
+}
+.ml6 {
+    font-weight: 900;
+    height: 77%;
     display: flex;
     justify-content: flex-end;
 }
 
-.ml3 {
-    font-weight: 900;
-    font-size: 3.5em;
+@media screen and (max-width: 1270px) {
+    .text-p {
+    height: 90%;
+    }
+}
+
+@media screen and (max-width: 1230px) {
+    #banner .text {
+        line-height: 20px;
+    }
+    
+    .text-p {
+        height: 100%;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -59,14 +74,11 @@
         Writing-mode: horizontal-tb;
     }
 
-    #banner .text p {
-        margin: 36px;
-        line-height: 44px;
-        font-size: 30px;
-    }
-
-    #banner .text p span {
-        line-height: 78px;
+    .text-p p {
+        height: 20%;
+        line-height: 0px;
+        margin-bottom: 0;
+        margin-top: 30px;
     }
 }
 
@@ -74,6 +86,16 @@
     #banner {
         display: flex;
         flex-direction: column;
+    }
+
+    .text-p {
+        margin: 20px 0;
+    }
+
+    .text-p p {
+        line-height: 50px;
+        margin-bottom: 0;
+        margin-top: 0px;
     }
 }
 /* 上方 banner 結束 */
@@ -227,25 +249,25 @@
 #marquee .pic-container {
     display: flex;
     height: 600px;
-    animation: marquee 60s infinite linear;
+    animation: marquee 75s infinite linear;
 }
 
 .pic01 {
     display: flex;
     align-items: flex-start;
-    animation: marquee 60s infinite cubic-bezier(0,1.62,1,-0.83);
+    animation: marquee 75s infinite cubic-bezier(0,1.62,1,-0.83);
 }
 
 .pic02 {
     display: flex;
     align-items: center;
-    animation: marquee 60s infinite cubic-bezier(.87,-0.99,.19,1.99);
+    animation: marquee 75s infinite cubic-bezier(.87,-0.99,.19,1.99);
 }
 
 .pic03 {
     display: flex;
     align-items: flex-end;
-    animation: marquee 60s infinite cubic-bezier(.17,.67,.97,-0.16);
+    animation: marquee 75s infinite cubic-bezier(.17,.67,.97,-0.16);
 }
 
 #marquee .pic-container .pic {
@@ -384,8 +406,8 @@
 
 .book-right input[type=submit]:hover {
     transition: 0.5s all ease;
-    background: #FB966E;
-    border: 2px solid #FB966E;
+    background: #6D2E5B;
+    border: 2px solid #6D2E5B;
 }
 @media screen and (max-width: 1024px) {
     .book-left {
