@@ -45,7 +45,7 @@
     <!-- 食材介紹 -->
     <section>
         <div class="ingredients">
-            <img src="../../../public/images/ingredients.png" alt="">
+            <img src="{{asset('images/index-background.jpeg')}}" alt="">
         </div>
     </section>
 
