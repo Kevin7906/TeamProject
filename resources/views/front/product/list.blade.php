@@ -1,5 +1,5 @@
 @extends('layouts.template')
-@section('title','一伴美味')
+@section('title','美味餐點')
 
 @section('css')
     <link rel="stylesheet" href="{{asset('css/menu-list.css')}}">

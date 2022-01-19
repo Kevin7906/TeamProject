@@ -37,6 +37,10 @@
     .instagram iframe {
             width: 600px;
         }
+
+    .coffee {
+        clip-path: polygon(75% 0, 90% 5%, 100% 30%, 97% 84%, 83% 100%, 40% 100%, 14% 93%, 0 78%, 4% 21%, 18% 4%);
+    }
 </style>
 @endsection
 
@@ -90,13 +94,16 @@
         </div>
         <div class="col-10 d-flex align-items-center mb-5">
             <img data-aos="fade-up"
-            data-aos-duration="3000" class="col-3 me-1" src="https://threetimescoffee.jp/images/about_img03.png" style="width: 200px">
+            data-aos-duration="3000" class="col-3 me-1 coffee" src="{{asset('images/cake.jpg')}}" style="width: 200px">
             <img data-aos="fade-up"
-            data-aos-duration="3000" class="col-3 ms-1" src="https://threetimescoffee.jp/images/about_img04.png" style="width: 200px">
-            <div class="col-6 ms-2"><p>1.
-                その日の気持ちに寄り添ったコーヒーを
-                気持ちを後押ししたり、誰かと出会うきっかけになったり。
-                1日のはじまりや昼下がりに淹れたてのコーヒーを。その日の気持ちに寄り添ったコーヒーを 気持ちを後押ししたり、誰かと出会うきっかけになったり。 1日のはじまりや昼下がりに淹れたてのコーヒーを。</p></div>
+            data-aos-duration="3000" class="col-3 ms-1 coffee" src="{{asset('images/coffee.jpg')}}" style="width: 200px">
+            <div class="col-6 ms-4">
+                <p>
+                在忙碌倉促的生活中相遇，借用你一杯咖啡的時間，
+                與我們一起喝一杯咖啡一份甜點，為生活加溫，在此刻溫柔待己。也希望大家都能夠，
+                在一人一伴好好享受美好的一天。
+                </p>
+            </div>
         </div>
         <div class="container d-flex justify-content-center align-items-center">
             <div class="video-player">

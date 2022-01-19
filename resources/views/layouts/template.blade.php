@@ -35,7 +35,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item d-flex justify-content-center me-5">
                         <a class="link" href="{{route('about')}}"><i class="fas fa-dumpster me-1"></i>
-                        <span>關於我們</span>
+                        <span>關於一伴</span>
                         </a>
                     </li>
                     <li class="nav-item d-flex justify-content-center me-5">
@@ -45,7 +45,7 @@
                     </li>
                     <li class="nav-item d-flex justify-content-center me-5">
                         <a class="link" href="{{route('location.list')}}"><i class="fas fa-comments me-1"></i>
-                        <span>聯絡我們</span>
+                        <span>店面資訊</span>
                         </a>
                     </li>
                     <li class="nav-item d-flex justify-content-center me-5">
