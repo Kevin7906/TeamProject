@@ -11,9 +11,9 @@
         <div class="banner-img"></div>
     </div>
     <!-- 日式三明治 -->
-    <div class="d-flex justify-content-center flex-wrap" style="background-color: rgb(249, 233, 209);">
+    <div class="d-flex justify-content-center flex-wrap" style="background-color: #f3f9f6;">
         <div class="container d-flex justify-content-center col-10">
-            <div class="card mb-5 mt-5" style="max-width: 100%; background-color: rgb(249, 233, 209);">
+            <div class="card mb-5 mt-5" style="max-width: 100%; background-color: #f3f9f6;">
                 <div class="row g-0 flex-wrap images">
                     <div class="col-12">
                         <div class="row">
@@ -74,9 +74,9 @@
     </div>
 
     <!-- 經典飲品 -->
-    <div class="d-flex justify-content-center flex-wrap menu-content" style="background-color: rgb(250, 224, 186);">
+    <div class="d-flex justify-content-center flex-wrap menu-content" style="background-color: #fffdef">
         <div class="container col-md-8">
-            <div class="card mb-5 mt-5 border-0" style="max-width: 100%; background-color: rgb(250, 224, 186);">
+            <div class="card mb-5 mt-5 border-0" style="max-width: 100%; background-color: #fffdef">
                 <div class="row">
                     <div class="col-md-8">
                         <div class="card-body">
@@ -125,9 +125,9 @@
     </div>
 
     <!-- 特調飲品 -->
-    <div class="d-flex justify-content-center flex-wrap menu-content" style="background-color: rgb(249, 233, 209);">
+    <div class="d-flex justify-content-center flex-wrap menu-content" style="background-color: #f3f9f6;">
         <div class="container col-md-8">
-            <div class="card mb-5 mt-5 border-0" style="max-width: 100%; background-color: rgb(249, 233, 209)">
+            <div class="card mb-5 mt-5 border-0" style="max-width: 100%; background-color: #f3f9f6">
                 <div class="row g-0">
                     <div class="col-md-4 menu-img image-special image-active" data-image="桂花檸檬紅茶" style="background-image: url({{asset('images/menu/products/drink-桂花檸檬紅茶.png')}}); background-position: 16% 0;"></div>
                     <div class="col-md-4 menu-img image-special" data-image="黑糖奶茶" style="background-image: url({{asset('images/menu/products/special-黑糖奶茶.jpg')}}); background-position: 35% 0;"></div>
@@ -169,9 +169,9 @@
     </div>
 
     <!-- 特調氣泡飲 -->
-    <div class="d-flex justify-content-center flex-wrap menu-content" style="background-color: rgb(250, 224, 186);">
+    <div class="d-flex justify-content-center flex-wrap menu-content" style="background-color: #fffdef">
         <div class="container col-md-8">
-            <div class="card mb-5 mt-5 border-0" style="max-width: 100%; background-color: rgb(250, 224, 186);">
+            <div class="card mb-5 mt-5 border-0" style="max-width: 100%; background-color: #fffdef">
                 <div class="row g-0">
                     <div class="col-md-8">
                         <div class="card-body">
@@ -212,9 +212,9 @@
     </div>
 
     <!-- 單點佐味小食 -->
-    <div class="d-flex justify-content-center flex-wrap menu-content final-menu" style="background-color: rgb(249, 233, 209);">
+    <div class="d-flex justify-content-center flex-wrap menu-content final-menu" style="background-color: #f3f9f6;">
         <div class="container col-md-8">
-            <div class="card mb-5 mt-5 border-0" style="max-width: 100%; background-color: rgb(249, 233, 209)">
+            <div class="card mb-5 mt-5 border-0" style="max-width: 100%; background-color: #f3f9f6">
                 <div class="row g-0">
                     <div class="col-md-4 menu-img image-side-dish image-active" data-image="楔型薯塊" style="background-image: url({{asset('images/menu/products/楔型薯塊.jpg')}}); background-position: 0 32%;"></div>
                     <div class="col-md-4 menu-img image-side-dish" data-image="半熟嫩蛋" style="background-image: url({{asset('images/menu/products/半熟嫩蛋.jpg')}}); background-size: 104%; background-repeat: no-repeat; background-position: 144% 70%;"></div>

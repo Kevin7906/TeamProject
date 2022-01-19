@@ -22,7 +22,7 @@
 
 <body>
     <!-- 上方 Navbar -->
-    <nav class="navbar navbar-expand-md navbar-light" style="background-color: rgb(248, 233, 209);">
+    <nav class="navbar navbar-expand-md navbar-light" style="background-color: #fbf7f3;">
         <div class="container col-10">
             <a class="navbar-brand" href="{{route('index')}}">
                 <img src="{{asset('images/logo.jpeg')}}" width="60" alt="" style="border-radius: 50%;">

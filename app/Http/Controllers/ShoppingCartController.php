@@ -99,16 +99,16 @@ class ShoppingCartController extends Controller
                 'image_url'=>$donut->image_url,
             ]);
         }
-        // 交易完成，清除訂單
-        // \Cart::clear();
-
+        
         return redirect()->route('shopping-cart.step04',['order_no'=>$order->order_no]);
     }
-
+    
     public function step04($orderNo)
     {
         $order = Order::with('orderDetails')->where('order_no',$orderNo)->first();
-
+        // 交易完成，清除訂單
+        \Cart::clear();
+        
         return view('front.shopping-cart.step04',compact('order'));
     }
 

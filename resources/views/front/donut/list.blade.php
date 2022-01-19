@@ -5,6 +5,19 @@
 {{-- sweetalert2 --}}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.3.3/sweetalert2.min.css">
 <link rel="stylesheet" href="{{asset('css/donut-list.css')}}">
+<style>
+    main {
+        background: #fffffb;
+    }
+
+    section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 10;
+    margin-bottom: 300px;
+    }
+</style>
 @endsection
 
 @section('main')

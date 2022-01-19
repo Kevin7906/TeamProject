@@ -118,7 +118,7 @@
     }
 
     #crumbs .progress03::after {
-        border-left: 30px solid #3d313f;
+        border-left: 30px solid #dcc1b0;
     }
 
     #crumbs .progress04::after {
@@ -160,7 +160,7 @@
     }
 
     #crumbs .progress03::after {
-        border-left: 25px solid #3d313f;
+        border-left: 25px solid #dcc1b0;
     }
 
     #crumbs .progress04::after {
@@ -199,7 +199,7 @@
     }
 
     #crumbs .progress03::after {
-        border-left: 15px solid #3d313f;
+        border-left: 15px solid #dcc1b0;
     }
 
     #crumbs .progress04::after {
