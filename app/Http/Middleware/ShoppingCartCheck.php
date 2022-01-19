@@ -17,7 +17,7 @@ class ShoppingCartCheck
     public function handle(Request $request, Closure $next)
     {
         if (\Cart::isEmpty() ) {
-            return redirect('donut.list')->with([
+            return redirect()->route('donut.list')->with([
                 'message' => '請先將商品加入購物車中~謝謝'
             ]);
         }
