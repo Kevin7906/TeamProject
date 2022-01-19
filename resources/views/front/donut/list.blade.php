@@ -223,64 +223,49 @@
 </script>
 <!-- 甜甜圈左上角裝飾 結束 -->
 
-<!-- 數量增減動畫 開始 -->
-<script>
-
-</script>
-<!-- 數量增減動畫 結束 -->
 
 <!-- 加入購物車按紐 開始 -->
 <script>
-    // const btn = document.querySelectorAll('.buy-btn');
-    // btn.onmousemove = function (e) {
-    //     const x = e.pageX - btn.offsetLeft;
-    //     const y = e.pageY - btn.offsetTop;
-
-    //     btn.style.setProperty('--x', x + 'px');
-    //     btn.style.setProperty('--y', y + 'px');
-    // }
-        // foreach.function (水果盒裡的每個水果,水果盒裡的水果位置)
-
-        const plusElements = document.querySelectorAll('.plus');
-        const minusElements = document.querySelectorAll('.minus');
-        const inputElements = document.querySelectorAll('.qty');
-        const addCartElements = document.querySelectorAll('.add-cart');
-        plusElements.forEach( function(plusElement,index) {
-            plusElement.addEventListener('click',function(){
-                inputElements[index].value = Number(inputElements[index].value) + 1;
-            }); 
+    const plusElements = document.querySelectorAll('.plus');
+    const minusElements = document.querySelectorAll('.minus');
+    const inputElements = document.querySelectorAll('.qty');
+    const addCartElements = document.querySelectorAll('.add-cart');
+    plusElements.forEach( function(plusElement,index) {
+        plusElement.addEventListener('click',function(){
+            inputElements[index].value = Number(inputElements[index].value) + 1;
+        }); 
+    });
+    minusElements.forEach( function(minusElement,index) {
+        minusElement.addEventListener('click',function(){
+            if (inputElements[index].value > 1) {
+                inputElements[index].value = Number(inputElements[index].value) - 1;
+            };
         });
-        minusElements.forEach( function(minusElement,index) {
-            minusElement.addEventListener('click',function(){
-                if (inputElements[index].value > 1) {
-                    inputElements[index].value = Number(inputElements[index].value) - 1;
-                };
+    });
+    addCartElements.forEach( function(addCartElement,index){
+        addCartElement.addEventListener('click',function(){
+            // 產品ID
+            let productId = this.getAttribute('data-id');
+            // 產品數量
+            let qty = inputElements[index].value;
+            let formData = new FormData();
+            formData.append('_token','{{csrf_token()}}');
+            formData.append('id',productId);
+            formData.append('qty',qty);
+            // fetch
+            let url = '{{route('shopping-cart.add')}}';
+            fetch(url,{
+                'method' : 'post',
+                'body' : formData
+            }).then(function(response){
+                return response.text();
+            }).then(function(data){
+                if (data == 'success') {
+                    alert('加入成功');
+                }
             });
         });
-        addCartElements.forEach( function(addCartElement,index){
-            addCartElement.addEventListener('click',function(){
-                // 產品ID
-                let productId = this.getAttribute('data-id');
-                // 產品數量
-                let qty = inputElements[index].value;
-                let formData = new FormData();
-                formData.append('_token','{{csrf_token()}}');
-                formData.append('id',productId);
-                formData.append('qty',qty);
-                // fetch
-                let url = '{{route('shopping-cart.add')}}';
-                fetch(url,{
-                    'method' : 'post',
-                    'body' : formData
-                }).then(function(response){
-                    return response.text();
-                }).then(function(data){
-                    if (data == 'success') {
-                        alert('加入成功');
-                    }
-                });
-            });
-        });
+    });
 </script>
 <!-- 加入購物車按紐 結束 -->
 @endsection
