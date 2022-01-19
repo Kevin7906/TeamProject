@@ -24,7 +24,7 @@
     <!-- 上方 Navbar -->
     <nav class="navbar navbar-expand-md navbar-light" style="background-color: rgb(248, 233, 209);">
         <div class="container col-10">
-            <a class="navbar-brand" href="">
+            <a class="navbar-brand" href="{{route('index')}}">
                 <img src="{{asset('images/logo.jpeg')}}" width="60" alt="" style="border-radius: 50%;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
