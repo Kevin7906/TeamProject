@@ -97,7 +97,7 @@
         <div class="container">
             <div class="row book-info">
                 <div class="col-6 book-left wow fadeInLeft animated" data-wow-delay=".5s">
-                    <img src="http://www.innk.com.tw/wp-content/uploads/2018/12/1_9UJO_sPcJAF0mVzN1ItqtQ.jpeg" alt="">
+                    <img src="{{asset('images/booking-img.jpeg')}}" alt="">
                 </div>
                 <div class="col-6 book-right wow fadeInRight animated" data-wow-delay=".5s">
                     <h2 class="title wow fadeInDown animated" data-wow-delay=".5s">線上預約</h2>
