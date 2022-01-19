@@ -100,7 +100,7 @@ class ShoppingCartController extends Controller
             ]);
         }
         // 交易完成，清除訂單
-        \Cart::clear();
+        // \Cart::clear();
 
         return redirect()->route('shopping-cart.step04',['order_no'=>$order->order_no]);
     }
