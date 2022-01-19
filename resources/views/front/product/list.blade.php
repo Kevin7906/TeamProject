@@ -14,10 +14,10 @@
     <div class="d-flex justify-content-center flex-wrap" style="background-color: rgb(249, 233, 209);">
         <div class="container d-flex justify-content-center col-10">
             <div class="card mb-5 mt-5" style="max-width: 100%; background-color: rgb(249, 233, 209);">
-                <div class="row g-0 d-flex flex-wrap images">
-                    <div class="col-12 d-flex mb-3">
+                <div class="row g-0 flex-wrap images">
+                    <div class="col-12">
                         <div class="row">
-                            <div class="col-md-4 me-3 food-info">
+                            <div class="col-md-4 mb-3 food-info">
                                 <img class="food__image"
                                     src="{{asset('images/menu/products/sandwich-日式原味玉子燒.jpg')}}" alt="">
                                 <div class="food__text">
@@ -26,7 +26,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-md-4 me-3 food-info">
+                            <div class="col-md-4 mb-3 food-info">
                                 <img class="food__image"
                                     src="{{asset('images/menu/products/sandwich-千層豬排玉子燒.jpeg')}}" alt="">
                                 <div class="food__text">
@@ -35,7 +35,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-md-4 food-info">
+                            <div class="col-md-4 mb-3 food-info">
                                 <img class="food__image"
                                     src="{{asset('images/menu/products/sandwich-復刻日式蛋沙拉三明治.jpeg')}}" alt="">
                                 <div class="food__text">
@@ -46,9 +46,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 d-flex mb-3">
+                    <div class="col-12">
                         <div class="row">
-                            <div class="col-md-5 me-5 food-info">
+                            <div class="col-md-6 mb-3 food-info">
                                 <img class="food__image"
                                     src="{{asset('images/menu/products/sandwich-花醬起司玉子燒.jpeg')}}" alt="">
                                 <div class="food__text">
@@ -57,7 +57,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-md-6 food-info">
+                            <div class="col-md-6 mb-3 food-info">
                                 <img class="food__image"
                                     src="{{asset('images/menu/products/大海干貝香蒜起司厚切丹麥.jpg')}}" alt="">
                                 <div class="food__text">
