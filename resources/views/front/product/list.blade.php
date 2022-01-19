@@ -35,7 +35,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-md-3 food-info">
+                            <div class="col-md-4 food-info">
                                 <img class="food__image"
                                     src="{{asset('images/menu/products/sandwich-復刻日式蛋沙拉三明治.jpeg')}}" alt="">
                                 <div class="food__text">
