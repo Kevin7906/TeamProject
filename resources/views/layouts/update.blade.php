@@ -37,7 +37,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3"> 一人一伴<br>後台管理系統 </div>
             </a>
 
             <!-- Divider -->
@@ -55,7 +55,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                管理介面
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -63,11 +63,11 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>管理頁面</span>
+                    <span>管理入口</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
+                        <h6 class="collapse-header">管理頁面:</h6>
                         <a class="collapse-item" href="{{ route('donuts.index') }}">菜單管理</a>
                         <a class="collapse-item" href="{{ route('products.index') }}">宅配管理</a>
                     </div>
