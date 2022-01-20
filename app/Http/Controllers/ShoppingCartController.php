@@ -10,6 +10,15 @@ use Illuminate\Http\Request;
 
 class ShoppingCartController extends Controller
 {
+    public function index()
+    {
+        $orders = Order::get();
+
+        return view('admin.shopping-cart.index',compact('orders'));
+    }
+
+
+
     public function add(Request $request)
     {
         $donut = Donut::find($request->id);

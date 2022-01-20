@@ -57,8 +57,10 @@ Route::prefix('/shopping-cart')->group(function () {
 Route::prefix('/admin')->middleware(['auth'])->group(function () {
     // 菜單
     Route::resource('/products',ProductController::class);
-    //甜甜圈
+    // 甜甜圈
     Route::resource('/donuts',DonutController::class);
+    // 
+    Route::get('/shopping-cart',[ShoppingCartController::class,'index'])->name('cart-index');
 
 });
 
