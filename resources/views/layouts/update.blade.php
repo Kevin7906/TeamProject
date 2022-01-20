@@ -68,8 +68,8 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">管理頁面:</h6>
-                        <a class="collapse-item" href="{{ route('donuts.index') }}">菜單管理</a>
-                        <a class="collapse-item" href="{{ route('products.index') }}">宅配管理</a>
+                        <a class="collapse-item" href="{{ route('donuts.index') }}">宅配管理</a>
+                        <a class="collapse-item" href="{{ route('products.index') }}">菜單管理</a>
                         <a class="collapse-item" href="{{ route('cart-index') }}">訂單管理</a>
 
                     </div>
