@@ -37,7 +37,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3"> 一人一伴<br>後台管理系統 </div>
+                <div class="sidebar-brand-text mx-3">一人一伴</div>
             </a>
 
             <!-- Divider -->
@@ -47,7 +47,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{{ route('home') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>後台管理系統</span></a>
             </li>
 
             <!-- Divider -->
